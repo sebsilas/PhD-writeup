@@ -40,6 +40,7 @@ iii) *item generation curation*
 iv) *item selection*: that of selecting new melodic material to learn to improve playing by ear skills.
 
 # Generalising beyond jazz 
+
 Whilst I motivate this problem historically and pedagogically in terms of those learning jazz materials, I note, that I expect many of the outcomes to be relevant to playing by ear to very similar - if not virtually identical - for other types of music too, and at least very similar for *singing by ear* too which is far more ubiqutuous. Since virtually everyone can sing (CITE) but far fewer people have access to an instrument beyond the voice (CITE), I will often discuss singing by ear too and borrow from this literature. In general, much of the cognitive processes behind singing and playing by ear should be very similar. I thus suggest that, the outcomes of this dissertation are not only relevant to jazz musicians, but have a much larger impact, for musicians and musics of all kinds - at least in principle. In practice, model specifics may need adapting for utmost relevance to other domains.
 
 
