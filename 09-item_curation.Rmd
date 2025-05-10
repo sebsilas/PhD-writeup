@@ -5,7 +5,7 @@
 
 # TODO demo PBET etc. sampling functions
 
-```{r}
+```{r, eval = FALSE}
 
 PBET::item_characteristics_sampler_pbet()
 
