@@ -1,0 +1,97 @@
+
+
+# Introduction
+
+- Searching for melodic material to play be ear
+
+- Music and combinatorics
+
+"The Slonimsky Problem"
+
+- Jazz books
+- Covid => PDF
+
+# Literature review
+
+
+## Playing By Ear
+
+### Cognitive model of playing by ear
+
+### Visual vs. auditory learning to play by ear
+
+
+### Models of learning
+
+# Language learning
+
+- reviewing and spaced repetition
+- Apps:
+  - Supermemo
+
+
+# Models of musical structure and musical corpora
+
+# Review of modelling approaches/framework
+
+## IRT approaches
+
+- Mixed effects framework, random intercepts => ability, model item difficulty with fixed effect features
+
+- Adaptive IRT tasks
+
+## Machine learning
+
+- xgboost: assumption-free, but not able to model the structured nature of the data
+- gpboost as alternative?
+
+
+# DASH Model
+
+
+# Musical DASH
+
+# Knowledge tracing literature
+
+- Bayesian knowledge tracing
+- Deep knowledge tracing
+
+# Need to add similarity to predictions-
+- knowledge concepts as solution?
+
+# Method
+
+
+## Test development
+
+- SAA
+- PBET
+
+
+
+# Cognitive models of playing by ear
+
+## Musical item curation
+
+
+# Application development
+
+Software infrastructure:
+
+- musicassessr
+- itembankr
+- pyin
+- musicassessrdb
+
+# Front end 
+
+- Slonimsky.app
+
+# Intervention study
+
+# Alternative uses
+
+- SongBird
+
+
+

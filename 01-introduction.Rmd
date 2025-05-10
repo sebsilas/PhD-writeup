@@ -1,0 +1,118 @@
+# Introduction {#introduction}
+
+Jazz musician spiel
+
+In 1947, the Russian-American composer Nicolas Slonimsky who was “obsessed with twelve-tone rows” (https://books.google.de/books?id=r9S--ESUuxEC&pg=PR151&lpg=PR151&dq=schoenberg+feat+of+mental+gymnastics&source=bl&ots=V4wLBZKQPn&sig=ACfU3U2mfVWZ-_DJgE8OEHtNN-SCCS5HJA&hl=en&sa=X&ved=2ahUKEwjooqOFtcTtAhV75-AKHQqaA9EQ6AEwBHoECAYQAg#v=onepage&q&f=false) produced a seminal book in music theory: the Thesaurus of Scales and Melodic Patterns (from here referred to as the Slonimsky’s Thesaurus; Slonimsky, 1947). As suggested by its title, the book is an exhaustive collection of musical melodies which Slonimsky laboriously generated manually and systematically. The purpose of such a volume was to provide a repository of musical melodies which breaks free of traditional tonal harmonic principles. In other words, it was an attempt to systematically open up possibilities in the Western Music system which had not yet been explored.
+
+Slonimsky’s undertaking can be viewed as a way of codifying and unlocking the potential of music through systematization; it highlights that by algorithimic thinking, new possibilities can be unleashed. As such, Slonimsky’s volume fascinated.. Coltrane … Zappa.
+
+One basic principle behind Slonimsky’s systematization was to divide one or more octaves of the twelve-tone system into symmetrical intervals and, from there, systematically interpolate different numbers of notes between the intervals created by the divisions. Additionally, he used other formulae to generate melodic patterns which had not yet been yield by his basic scheme. Of The Thesaurus, Schoenberg wrote to Slonimsky, “you might [have] in all probability organized every possible succession of tones" and referred to his work as "an admirable feast of mental gymnastics”. Whilst the former is almost certainly not true (unless constrained to a length, the possibilities of melodies are infinite), the latter is undoubtedly. However, such a task would now be solved at ease by a script on a modern computer.
+
+The present author was fascinated by the possibilities of the work, wishing to uptake the melodies on his saxophone in a systematic way. However, the book has at least 1,400 discrete items and some of the patterns are terrifically long and complicated. Additionally, nearly all of the melodies are presented from a single note, C, and could be transposed to start on the other 11 chromatic tones. This means there are at least 16,800 (12 * 1400) items to be learned. The author’s saxophone tutor, who was a virtuoso, once said, "Oh, don't bother trying to learn [Slonimsky’s Thesaurus of Scales and Melodic Patterns] systematically". This was a wise comment since, as there is so much information, it is almost impossible for a human to comprehend and track their learning of it systematically. However, with advances in computation, this is a relatively easy challenge to solve once the data is in digital form. The author entered the Slonimsky’s Thesaurus corpus into his computer to provide a digital representation. This corpus will remain the test case for description in this document later on.
+
+In more recent times, other repositieies of melodies have emerged which are not usually as concerned with twelve-tone possibilities, but are more constrained to a pedagogically focused item banks. Such volumes can be viewed as melodic etudes, which are usually geared towards jazz improvisation and acquiring inner melodic representations.
+
+In the music theory and music education literatures, particularly with respect to jazz improvisation, there are many books which contain itemised melodic patterns to stimulate compositional ideas or so that training musicians can practise acquiring cognitive representations of new melodic material  (Lateef, 2015; Weiskopf, 2015; Slonimsky, 1947; Ricker, 1999). Such books are essentially corpuses (of which they will from here be referred to) of melodic grammar and possibilities. As well as improving one’s melodic “vocabulary”, such books can be used to develop technical prowess, by challenging the player to acquire new action patterns to perform the items. 
+
+However, often these volumes are just repositories of melodies and lack a systematic structure, or if they do, the structure is not built upon rigid principles which advance the objective of efficient learning. This is also a technological issue: books are not able to break down items into smaller pieces and consider the relationship between items. Instead, the meaning as to be discovered post hoc by the book’s user. 
+
+Therefore, by not bring structured in a way that makes them optimised for memorisation such books are limited. Typically, contents will be structured into discrete items where each item represents a particular melodic sequence. However, each of these items can be broken into smaller contiguous subsets known as n-grams (Damashek, 1995), here called “chunks”. Such componentisation makes items more readily memorable since sequence length is a major predictor of how memorable an item is (Cowan, 2010; Miller, 1956). The implication is that, by first learning smaller chunks and then increasing the size of chunks, one can optimise the learning process (Lehmann & Kopiez, 2011). To undertake such a task manually is more or less impossible as it would require an individual to comprehend a combinatorial explosion of relationships between the items in a given corpus (intra-corpus). Moreover, different corpuses will also share identical and similar chunks, so learning one chunk may support learning other chunks inter-corpuses. It would be redundant to treat these as separate chunks (except to count chunks by frequency, another potential indicator of its usefulness) and would instead be more efficient to have a centralised system which can consider information inter-corpus. 
+
+The present paper details a new set of scripts which allow a user to process a corpus programmatically to solve some of the problems above. Consequentially, it is able to: a) provide useful insights into that particular corpus b) process the corpus into more readily memorable structures c) facilitate the ability to relate items to one another intra-corpus and inter-corpus . In doing so, the application should be able to improve the amount of time a user requires to learn melodic information from repositories of patterns.
+
+## Further Research/To Do
+
+* https://books.google.de/books/about/Perfect_Pitch.html?id=V1cIAQAAMAAJ&redir_esc=y
+
+* https://wiki.killuglyradio.com/wiki/Nicolas_Slonimsky
+
+
+# Motivations
+
+The main problems this thesis attempts to solve is:
+
+i) *A Computational Model of Playing By Ear Abilities*: Given an aurally presented melody as input and a reproduction of that melody by a performer as output, what are the cognitive processes underlying performance? This problem is one of developing a *cognitive model* of *playing by ear* skills. I will specifically seek to develop a *computational* model of playing by ear skills.
+
+ii) *A Computational Model of Playing By Ear Learning and Skill Acquisition*: Extending such a model, how do people learn to play by ear? How can people learn to play by ear *effectively*?
+
+iii) *item generation curation*
+
+iv) *item selection*: that of selecting new melodic material to learn to improve playing by ear skills.
+
+# Generalising beyond jazz 
+Whilst I motivate this problem historically and pedagogically in terms of those learning jazz materials, I note, that I expect many of the outcomes to be relevant to playing by ear to very similar - if not virtually identical - for other types of music too, and at least very similar for *singing by ear* too which is far more ubiqutuous. Since virtually everyone can sing (CITE) but far fewer people have access to an instrument beyond the voice (CITE), I will often discuss singing by ear too and borrow from this literature. In general, much of the cognitive processes behind singing and playing by ear should be very similar. I thus suggest that, the outcomes of this dissertation are not only relevant to jazz musicians, but have a much larger impact, for musicians and musics of all kinds - at least in principle. In practice, model specifics may need adapting for utmost relevance to other domains.
+
+
+There are two (related) principal problems that this thesis aims to tackle. First, since, as of yet, there exists no comprehensive computational model of playing by ear skills (in terms of both acquisition and utilisation), I intend to first propose a theoretical model based on a synthesis of related literature. Once described, I seek to investigate and validate parts of this proposed model in light of empirical data. The second principal problem is to, given such a computational model, design a computer application which helps playing by ear learners more efficiently improve their skills. This part of the thesis has a practical deliverable component that is intended to be used in real-life learning situations, whilst being situated in a scientific framework - both theoretical and statistical. Such an application would be proposed in an open source framework that can be extended by future developers to add new features and improve existing components of the application. The main problem the application intends to solve is one of *item selection* i.e., finding "optimum" playing by ear items to learn for a given learner, at a given timepoint.
+
+# Computational modelling
+
+
+
+# What is playing by ear?
+
+In this dissertation, I define playing by ear as the ability to reproduce an aurally presented melody on and instrument (including the voice). To play well by ear means to reproduce the musical properties of the heard melody accurately across relevant domains, such as pitch, interval and rhythmic structures. I note, that, precisely what these important musical structures to assess accuracy by are consist of is non-trivial, and something partly explored on this thesis. I thus leave the definition relatively general at this point. To play badly by ear means to struggle to reproduce the musical structures contained in the melody.
+
+Note, that my definition separates playing by ear from "improvisation", which is about spontaneously generating (new) ideas, not a faithful replication of that heard before.
+
+## Learning to play by ear
+
+I separate the general process of "playing by ear" from "learning to play by ear", even though the two are intrinsically linked. "Playing by ear" presumes that the melody is sufficiently "prelearned" to be recalled almost perfectly. Conversely, learning to play by ear is a separate process, whereby the melody to be recalled is not yet stable enough in memory to be reproduced faithfully. It will take specifically at least more than one attempt to be recalled accurately - potentially "revised" - or may not be recallable in a given session. Thus, learning requires multiple attempts. Learning also requires that improvements are made over attempts, in the relative short term [@silasLearningRecallingMelodies2023], but also over longer time periods.
+
+
+## Research questions
+
+PRQ1: How can one effectively learn to play by ear?
+
+The thesis aims to answer this question in psychological, musicological, computational, and pedagogical terms.
+
+SRQ1: What makes PBE difficult? (psychological, musicological)
+SRQ2: Can a computer app (with computational item selection) help learn more quickly? (computational)
+SRQ3: What does such a computational model need to take into account? (DASH?) (computational, psychological)
+SRQ4: Does presentation mode (visual vs. auditory) make a difference to learning? (pedagogical)
+SRQ5: Does singing a melody first help? (pedagogical)
+SRQ6: to what degree is playing by ear based on absolute vs. relative pitch?
+SRQ7: to what degree is playing by ear based on general working memory vs. acquired training?
+
+What is the relationship between sight-reading and PBE skills (we have this data, right?)
+
+PRQ2: Intervention: Does a program which implements these effectively work? (psychological, musicological, computational, pedagogical)
+
+
+# Music and combinatorics
+
+- Introduce notion of large melodic learning vocabularies (LMLVs), ?
+
+```{r}
+# library(musiccombinatoricsr)
+
+```
+
+
+
+### The Coltrane-Slonimsky Problem
+
+Solve the "Coltrane-Slonimsky Problem"
+
+-	Given a wealth of melodic possibilities to learn from, to select something to learn which is sufficiently challenging and interesting to the ear.
+
+
+Two key deliverables: front-facing apps:
+Slonimsky.app
+Songbird.training
+
+
+
+
+# Background
+
+
+## Historical approaches to improving playing by ear
+
+- record player
+- transcription books
+- pattern books
+
+
+
+
