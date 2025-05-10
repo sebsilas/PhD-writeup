@@ -25,10 +25,11 @@ jobs:
           Rscript -e 'bookdown::render_book("index.Rmd")'
 
       - name: Upload book artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: book
           path: _book/
+
 
   deploy:
     needs: build
@@ -42,6 +43,7 @@ jobs:
         with:
           name: book
           path: _book/
+
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
