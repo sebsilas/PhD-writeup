@@ -1,0 +1,5 @@
+
+book_filename: "Playing By Ear: A Computational Approach"
+output_dir: "docs"
+clean: ["_book"]
+new_session: yes
