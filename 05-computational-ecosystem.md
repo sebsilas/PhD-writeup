@@ -30,13 +30,13 @@ The present paper details a new set of scripts which allow a user to process a c
 
 
 
-```{r warning=FALSE, eval = FALSE}
+
+``` r
 library(itembankr)
 
 library(WJD)
 library(Berkowitz)
 #library(Slonimsky)
-
 ```
 
 
@@ -47,7 +47,8 @@ library(Berkowitz)
 
 The command used to create the item bank was:
 
-```{r, eval = FALSE}
+
+``` r
 WJD <- corpus_to_item_bank(corpus_name = "WJD", 
                            corpus_df = phrases_dbs2,
                            output_type = "ngram", 
@@ -57,41 +58,48 @@ WJD <- corpus_to_item_bank(corpus_name = "WJD",
 
 The properties of the item bank are:
 
-```{r, eval = FALSE}
+
+``` r
 WJD::WJD
 ```
 
 
-```{r, eval = FALSE}
+
+``` r
 itembankr::hist_item_bank(WJD::WJD)
 ```
 
 
 ### Berkowitz
-```{r warning=FALSE, eval = FALSE}
+
+``` r
 head(Berkowitz::Berkowitz)
 ```
 
 
 
-```{r warning=FALSE, eval = FALSE}
+
+``` r
 itembankr::hist_item_bank(Berkowitz::Berkowitz)
 ```
 
 
 ### Slonimsky
 
-```{r warning=FALSE, eval = FALSE}
+
+``` r
 head(Slonimsky::Slonimsky)
 ```
 
-```{r, eval = FALSE}
+
+``` r
 itembankr::hist_item_bank(Slonimsky::Slonimsky)
 ```
 
 ## Other useful functions
 
-```{r, eval = FALSE}
+
+``` r
 itembankr::subset_item_bank()
 
 itembankexplorer::item_bank_explorer(Berkowitz::Berkowitz)
@@ -106,7 +114,8 @@ Much of the architecture is grouped under the `musicassessr` package and ecosyst
 
 
 
-```{r warning=FALSE, eval = FALSE}
+
+``` r
 library(musicassessr)
 library(htmltools)
 
@@ -121,7 +130,8 @@ htmltools::tagList(
 )
 ```
 
-```{r warning=FALSE, eval = FALSE}
+
+``` r
 musicassessr::present_stimuli(
   stimuli = c(60, 62, 64, 65), 
   stimuli_type = "midi_notes", 
