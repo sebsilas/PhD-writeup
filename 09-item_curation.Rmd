@@ -3,7 +3,7 @@
 # Heterogenity and item bank sampling {#heterogeneity_and_item_bank_sampling}
 
 
-#TODO demo PBET etc. sampling functions
+# TODO demo PBET etc. sampling functions
 
 ```{r}
 
