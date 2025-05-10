@@ -3,7 +3,7 @@ name: Render and Deploy Bookdown
 on:
   push:
     branches:
-      - maste
+      - master  # Corrected from 'maste'
 
 jobs:
   build:
@@ -20,13 +20,15 @@ jobs:
         with:
           pandoc-version: '2.19.2'
 
+      - name: Check Pandoc version
+        run: pandoc --version
+
       - name: Install dependencies
         run: |
           Rscript -e 'install.packages(c("bookdown", "rmarkdown"))'
 
       - name: Render book
-        run: |
-          Rscript -e 'bookdown::render_book("index.Rmd")'
+        run: Rscript -e 'bookdown::render_book("index.Rmd")'
 
       - name: Upload book artifact
         uses: actions/upload-artifact@v4

@@ -71,16 +71,6 @@ I separate the general process of "playing by ear" from "learning to play by ear
 
 
 
-### The Coltrane-Slonimsky Problem
-
-Solve the "Coltrane-Slonimsky Problem"
-
--	Given a wealth of melodic possibilities to learn from, to select something to learn which is sufficiently challenging and interesting to the ear.
-
-
-Two key deliverables: front-facing apps:
-Slonimsky.app
-Songbird.training
 
 
 
@@ -117,5 +107,16 @@ SRQ7: to what degree is playing by ear based on general working memory vs. acqui
 What is the relationship between sight-reading and PBE skills (we have this data, right?)
 
 PRQ2: Intervention: Does a program which implements these effectively work? (psychological, musicological, computational, pedagogical)
+
+### The Coltrane-Slonimsky Problem
+
+Solve the "Coltrane-Slonimsky Problem"
+
+-	Given a wealth of melodic possibilities to learn from, to select something to learn which is sufficiently challenging and interesting to the ear.
+
+
+Two key deliverables: front-facing apps:
+Slonimsky.app
+Songbird.training
 
 
