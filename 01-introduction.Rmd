@@ -60,25 +60,6 @@ Note, that my definition separates playing by ear from "improvisation", which is
 I separate the general process of "playing by ear" from "learning to play by ear", even though the two are intrinsically linked. "Playing by ear" presumes that the melody is sufficiently "prelearned" to be recalled almost perfectly. Conversely, learning to play by ear is a separate process, whereby the melody to be recalled is not yet stable enough in memory to be reproduced faithfully. It will take specifically at least more than one attempt to be recalled accurately - potentially "revised" - or may not be recallable in a given session. Thus, learning requires multiple attempts. Learning also requires that improvements are made over attempts, in the relative short term [@silasLearningRecallingMelodies2023], but also over longer time periods.
 
 
-## Research questions
-
-PRQ1: How can one effectively learn to play by ear?
-
-The thesis aims to answer this question in psychological, musicological, computational, and pedagogical terms.
-
-SRQ1: What makes PBE difficult? (psychological, musicological)
-SRQ2: Can a computer app (with computational item selection) help learn more quickly? (computational)
-SRQ3: What does such a computational model need to take into account? (DASH?) (computational, psychological)
-SRQ4: Does presentation mode (visual vs. auditory) make a difference to learning? (pedagogical)
-SRQ5: Does singing a melody first help? (pedagogical)
-SRQ6: to what degree is playing by ear based on absolute vs. relative pitch?
-SRQ7: to what degree is playing by ear based on general working memory vs. acquired training?
-
-What is the relationship between sight-reading and PBE skills (we have this data, right?)
-
-PRQ2: Intervention: Does a program which implements these effectively work? (psychological, musicological, computational, pedagogical)
-
-
 # Music and combinatorics
 
 - Introduce notion of large melodic learning vocabularies (LMLVs), ?
@@ -114,5 +95,27 @@ Songbird.training
 - pattern books
 
 
+
+
+
+
+
+## Research questions
+
+PRQ1: How can one effectively learn to play by ear?
+
+The thesis aims to answer this question in psychological, musicological, computational, and pedagogical terms.
+
+SRQ1: What makes PBE difficult? (psychological, musicological)
+SRQ2: Can a computer app (with computational item selection) help learn more quickly? (computational)
+SRQ3: What does such a computational model need to take into account? (DASH?) (computational, psychological)
+SRQ4: Does presentation mode (visual vs. auditory) make a difference to learning? (pedagogical)
+SRQ5: Does singing a melody first help? (pedagogical)
+SRQ6: to what degree is playing by ear based on absolute vs. relative pitch?
+SRQ7: to what degree is playing by ear based on general working memory vs. acquired training?
+
+What is the relationship between sight-reading and PBE skills (we have this data, right?)
+
+PRQ2: Intervention: Does a program which implements these effectively work? (psychological, musicological, computational, pedagogical)
 
 
