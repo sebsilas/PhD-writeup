@@ -1,4 +1,16 @@
 
+---
+title: "Playing By Ear: A Computational Approach"
+author: "Seb Silas"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output:
+  bookdown::gitbook: default
+documentclass: book
+---
+
+
+
 "I love science, and it pains me to think that so many are terrified of the subject or feel that choosing science means you cannot also choose compassion, or the arts, or be awed by nature. Science is not meant to cure us of mystery, but to reinvent and reinvigorate it."
 
 - Robert Sapolsky
