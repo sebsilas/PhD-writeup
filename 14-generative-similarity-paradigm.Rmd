@@ -1,4 +1,4 @@
-# Reviewing and spaced repetition {#visual_vs_auditory_learning_pbe}
+# Generative similarity {#generative similarity}
 
 
 # identify correct vs incorrect ngrams
