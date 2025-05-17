@@ -3,9 +3,7 @@
 
 ## What is playing by ear?
 
-In this dissertation, I define playing by ear as the ability to reproduce an aurally presented melody on and instrument (including the voice). To play well by ear means to reproduce the musical properties of the heard melody accurately across relevant domains, such as pitch, interval and rhythmic structures. I note, that, precisely what these important musical structures to assess accuracy by are consist of is non-trivial, and something partly explored on this thesis. I thus leave the definition relatively general at this point. To play badly by ear means to struggle to reproduce the musical structures contained in the melody.
-
-Note, that my definition separates playing by ear from "improvisation", which is about spontaneously generating (new) ideas, not a faithful replication of that heard before.
+In this dissertation, I define playing by ear as the ability to reproduce an aurally presented melody on and instrument (including the voice). To play well by ear means to reproduce the musical properties of the heard melody accurately across relevant domains, such as pitch, interval and rhythmic structures. I note, that, precisely what these important musical structures to assess accuracy by are consist of is non-trivial, and something partly explored on this thesis. I thus leave the definition relatively general at this point. To play badly by ear means to struggle to reproduce the musical structures contained in the melody. Note that my definition separates playing by ear from "improvisation", which is about spontaneously *generating* (new) ideas, not a faithful replication of that heard before.
 
 ## Learning to play by ear
 

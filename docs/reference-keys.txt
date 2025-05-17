@@ -4,7 +4,7 @@ table-of-contents
 introduction
 the-problem-domain-and-approach
 motivations
-generalising-beyond-jazz
+generalising-beyond-jazz-and-playing-by-ear
 thesis-statement
 original-contributions
 research-questions
@@ -12,7 +12,7 @@ objectives-and-scope
 scope
 front-facing-tools
 slonimsky.app
-songbird.training
+songbird
 dissertation-outline
 foundations
 what-is-playing-by-ear
@@ -28,10 +28,17 @@ modern-technological-approaches-to-ear-training
 integration-of-technology-in-educational-settings
 conclusion
 empirical_backgrounds
+playing-by-ear-cognitive-foundations-developmental-trajectories-and-practical-strategies-in-musical-ear-playing
+introduction-1
+cognitive-and-neural-mechanisms-underlying-playing-by-ear
+musicological-perspectives
 music-and-combinatorics
 melody-as-cognitive-psychology-melodic-represention
 computed-melodic-features-as-a-solution-to-selecting-items
 pattern-books-as-item-banks
+music-psychologymusic-education
+cognitive-psychology
+applications-in-language-learning
 theoretical-model
 pfordreshers-h-pac-model
 pfordreshers-cognitive-model-of-singing-accuracy
