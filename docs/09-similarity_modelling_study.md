@@ -1,19 +1,27 @@
+
+
+# A similarity-based approach to item selection {#similarity_study}
+
+
+
+## Melodic corpora as networks 
+
+
+
 # Approaches to similarity for large scale corpora {#item_banks_and_similarity}
 
 opti3 etc.
 
 ## Problem:
 
-```{r}
 
+``` r
 # WJD_no_items <- nrow(WJD::WJD('phrases'))
-
 ```
 
-```{r}
 
+``` r
 # factorial(WJD_no_items)
-
 ```
 
 
@@ -30,7 +38,4 @@ Conclusion: similarity of features =! melodic (opti3/[perceptual?!]) similarity
 
 ## Approach #3: on breaking up items into ngrams, store representations/similarity.
 - by definition ngrams will be similarity to the overall melody they come from
-
-
-
 

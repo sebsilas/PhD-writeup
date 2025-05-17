@@ -2,7 +2,7 @@
 ---
 title: "Playing By Ear: A Computational Approach"
 author: "Seb Silas"
-date: "2025-05-10"
+date: "2025-05-17"
 site: bookdown::bookdown_site
 output:
   bookdown::gitbook: default
@@ -36,3 +36,25 @@ Less a means of learning the tradition orally (best go straight to the source, t
 
 The computer as the "heavy-lifter" so the musician can focus more on the sounds themselves; unburdening the musician
 
+
+
+## Acknowledgements
+
+
+For Soraya.
+
+
+Sylvia,
+
+
+Daniel Müllensiefen, Reinhard Kopiez.
+
+Klaus Frieler, 
+
+Mohamed Etteyeb
+
+Peter Harrison, Kilian Sander, 
+
+Antoine Sachet, James Petticrew, 
+
+Annabel Cohen

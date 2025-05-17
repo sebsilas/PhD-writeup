@@ -21,12 +21,21 @@ To be able to assess music production data, it is first necessary to
 
 # Psychologically meaningful musical item banks: itembankr 
 
+In my literature review, I noted that pattern books and melodic repositories have emerged to support jazz improvisation and acquiring inner melodic representations. Such books present itemised melodic patterns to stimulate compositional ideas or so that training musicians can practise acquiring cognitive representations of new melodic material  (Lateef, 2015; Weiskopf, 2015; Slonimsky, 1947; Ricker, 1999). Such books are essentially *corpora* or *item banks* of melodic grammar and possibilities. As well as improving one’s melodic "vocabulary", such books can be used to develop technical prowess, by challenging the player to acquire new action patterns to perform the items. 
+
+However, often these volumes are just repositories of melodies and lack a systematic structure, or if they do, the structure is not built upon robust cognitive psychological principles tha can advance the objective of efficient learning. This is also a technological issue: moreover, books are static and not able to break down items into smaller pieces and consider the relationship between items.
+
+By not being structured in a way that makes them optimised for memorisation, such books are limited. Typically, contents will be structured into discrete items where each item represents a particular melodic sequence. However, each of these items can be broken into smaller contiguous subsets known as N-grams (Damashek, 1995) or "chunks". Such componentisation makes items more readily memorable since sequence length is a major predictor of how memorable an item is (Cowan, 2010; Miller, 1956). The implication is that, by first learning smaller chunks and then increasing the size of chunks, one can optimise the learning process (Lehmann & Kopiez, 2011). To undertake such a task manually is more or less impossible as it would require an individual to comprehend a combinatorial explosion of relationships between the items in a given corpus (intra-corpus). Moreover, different corpora will also share identical and similar chunks, so learning one chunk may support learning other chunks inter-corpuses too. It would be redundant to treat these as separate chunks (except to count chunks by frequency, another potential indicator of its usefulness) and would instead be more efficient to have a centralised system which can consider information inter-corpora. 
+
 ### itembankr
 
-The purpose of itembankr is to..
+
+The purpose of `itembankr` is to..
 
 
 The present paper details a new set of scripts which allow a user to process a corpus programmatically to solve some of the problems above. Consequentially, it is able to: a) provide useful insights into that particular corpus b) process the corpus into more readily memorable structures c) facilitate the ability to relate items to one another intra-corpus and inter-corpus . In doing so, the application should be able to improve the amount of time a user requires to learn melodic information from repositories of patterns.
+
+`itembankr` gives a more useful representation to such melodic representations.
 
 
 
@@ -153,6 +162,8 @@ musicassessr::present_stimuli(
 
 
 
+
+# Ability tests
 
 
 
