@@ -1,8 +1,9 @@
 
 
-# Experiment 4: A similarity-based approach to item selection {#similarity_study}
+# Experiment 6: A similarity-based approach to item selection {#similarity_study}
 
 
+## Collaborative filtering
 
 ## Melodic corpora as networks 
 
