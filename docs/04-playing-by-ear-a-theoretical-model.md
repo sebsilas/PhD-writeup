@@ -5,9 +5,9 @@ As far as the author is aware, no computational model of playing by ear has been
 However, related computational models have been described, for instance in the domain of aural skill acquisition [@bakerModelingMelodicDictation2019] and sung melodic recall by the author [@silasLearningRecallingMelodies2023; @silasSingingAbilityAssessment2023]. Theoretical cognitive models have also been described in the domain of singing accuracy [@pfordresherTheoreticalPerspectivesSinging2015]. Therefore, in this section, I will attempt to synthesise this literature to propose a corresponding model specifically for playing by ear skills. I distinguish between two basic playing by ear processes: a) playing by ear skill acquisition (learning) and b) playing by ear skill execution (recall).
 
 
-# Pfordresher's H-PAC model
+## Pfordresher's H-PAC model
 
-# Pfordresher's cognitive model of singing accuracy
+## Pfordresher's cognitive model of singing accuracy
 
 I start first by using @pfordresherTheoreticalPerspectivesSinging2015's cognitive (but non-computational) model of singing accuracy, which is the most broad of the models I will review. At the low level, this model comprises an auditory feedback loop. In this loop, first, external auditory input is processed as low-level perceptual representations of sound (pitch, duration, timbre, loudness). Such low-level representations are used as input to a translation model, which relates auditory input to sensorimotor action that is relevant to singing. Hence, this enables the guidance of a singer’s sensorimotor plans to adjust their singing (e.g., to be in tune), in response to auditory feedback. Such changes in sensorimotor actions comprise physical processes like respiration, phonation, and articulation. Abstracting the sensorimotor part to the domain of playing by ear, such physical processes would be somewhat instrument-specific. For many instruments, the physical part will involve finger coordination (e.g., clarinet, violin), but for some, coordination will be more at the level of the arm  (e.g., percussion, drums). Many processes will be instrument-specific processes. For example, for brass and woodwind instruments, requiring to coordinate an embouchure to produce a sound. We do not exhaust these instrument-specific processes, but only state that such physical processes are part of the model, with instrument-specific attributes.
 
@@ -20,7 +20,7 @@ The lower-level auditory representations are also used as input to higher levels
 ## Baker's computational model of melodic dictation
 
 
-# Models of sung recall
+## Models of sung recall
 
 Lastly, I synthesise models from my own research regarding sung melodic recall. My @silasSingingAbilityAssessment2023 study investigated sung recall by examining its relationship with other related skills and participant attributes. Demographically, better sung recall ability ability was associated with more musical training (𝛽 = 0.07), a younger age (𝛽 = -0.05), and being female (𝛽 = -0.03), though the latter two effects were small. The findings suggest that while musical training can enhance singing ability, inherent skills might also predispose individuals to seek musical training. Moreover, there was a relatively large difference between the marginal and conditional R^2 values, which suggests that there is a sizeable proportion of individual differences in the sample of participants tested which explains SAA performance which shows that individual differences should explain performance on a task in which one can develop high levels of domain-specific expertise.
 
@@ -41,14 +41,14 @@ Moreover, the results highlight that similarity scores increase with each succes
 Overall, the study's use of similarity-based metrics, particularly the "opti3" metric that integrates pitch intervals, harmonic progression, and rhythmic similarity, offers a more nuanced and accurate assessment of how melodies are learned and recalled. By focusing on the gradual increase in recall length and the differential improvement across melodic segments, the study sheds light on the underlying cognitive processes involved in melodic memory, emphasizing the role of general memory mechanisms and the relatively limited impact of formal musical training.
 
 
-# Non-musical models of serial recall 
+## Non-musical models of serial recall 
 
 (look at Silas & Müllensiefen paper)
 
 
 - `ACT-R`
 
-# WM bits
+## WM bits
 
 - Baddeley and hitch
 - Berz (1995)
@@ -56,7 +56,7 @@ Overall, the study's use of similarity-based metrics, particularly the "opti3" m
 - @silasAssociationsMusicTraining2022 discussion around MWM and GWM
 
 
-# Bringing it together
+## Bringing it together
 
 In sum, then, 
 
@@ -116,24 +116,24 @@ The similarity calculation is performed only when the length of the **RecalledMe
 I note that the `MelSim` algorithm is itself modular and of discussion in and of itself (cite M&F). For the purpose of this paper,
 
 
-# Strategies
+## Strategies
 
 - Beyond scope of this dissertation to investigate in detail.
 - Pop strategies hypotheses: [@liscioWatchingPopularMusicians2024]
 - Also, we have our own text data, for later.
 
-# Learning, forgetting
+## Learning, forgetting
 
 - Ebbinghaus, learning curves
 - Unit of sleep 
 
 
-# The Melodic Mind As Item Bank
+## The Melodic Mind As Item Bank
 
 - Big concept
 
 
-# Predictions:
+## Predictions:
 
 - Simpler melodies will rely more on general working memory than musical working memory.
 - In the short term (< 30 mins), melodies learned by sight will be less better retained than those 

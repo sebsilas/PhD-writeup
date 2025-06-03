@@ -1,0 +1,34 @@
+
+# Backgrounds {#backgrounds}
+
+
+```{r child="_includes/_02_01-historical_background.Rmd"}
+
+
+```
+
+```{r child="_includes/_02_02-modern_technological_approaches.Rmd"}
+
+
+```
+
+```{r child="_includes/_02_03-playing_by_ear_literature_review.Rmd"}
+
+
+```
+
+```{r child="_includes/_02_04-musicological_background.Rmd"}
+
+
+```
+
+```{r child="_includes/_02_05-cognitive_psychological_background.Rmd"}
+
+
+```
+
+```{r child="_includes/_02_06-statistical_modelling_frameworks.Rmd"}
+
+
+```
+

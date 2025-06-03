@@ -1,28 +1,24 @@
 
 
-# Experiment 4: A similarity-based approach to item selection {#similarity_study}
+# Experiment 5: A similarity-based approach to item selection {#similarity_study}
+
+
+## Collaborative filtering
+
+
+
+
+## Approaches to similarity for large scale corpora
+
+
+
+
 
 
 
 ## Melodic corpora as networks 
 
 
-
-## Approaches to similarity for large scale corpora {#item_banks_and_similarity}
-
-opti3 etc.
-
-### Problem:
-
-
-``` r
-# WJD_no_items <- nrow(WJD::WJD('phrases'))
-```
-
-
-``` r
-# factorial(WJD_no_items)
-```
 
 
 ### Approach #1: similarity of features as proxy for melodic similarity

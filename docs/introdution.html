@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Introduction | Playing By Ear: A Computational Approach</title>
+  <meta name="description" content="2 Introduction | Playing By Ear: A Computational Approach" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Introduction | Playing By Ear: A Computational Approach" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Introduction | Playing By Ear: A Computational Approach" />
+  
+  
+  
+
+<meta name="author" content="Seb Silas" />
+
+
+<meta name="date" content="2025-06-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="historical_background.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Front Matter</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#foreword"><i class="fa fa-check"></i><b>1.1</b> Foreword</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i><b>1.2</b> Acknowledgements</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#toc"><i class="fa fa-check"></i><b>1.3</b> Table of Contents</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introdution.html"><a href="introdution.html"><i class="fa fa-check"></i><b>2</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introdution.html"><a href="introdution.html#what-is-playing-by-ear"><i class="fa fa-check"></i><b>2.1</b> What Is Playing By Ear?</a></li>
+<li class="chapter" data-level="2.2" data-path="introdution.html"><a href="introdution.html#learning-to-play-by-ear"><i class="fa fa-check"></i><b>2.2</b> Learning to Play By Ear</a></li>
+<li class="chapter" data-level="2.3" data-path="introdution.html"><a href="introdution.html#the-problem-domain-and-approach"><i class="fa fa-check"></i><b>2.3</b> The Problem Domain and Approach</a></li>
+<li class="chapter" data-level="2.4" data-path="introdution.html"><a href="introdution.html#motivations"><i class="fa fa-check"></i><b>2.4</b> Motivations</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="introdution.html"><a href="introdution.html#generalising-beyond-jazz-and-playing-by-ear"><i class="fa fa-check"></i><b>2.4.1</b> Generalising Beyond Jazz and Playing By Ear</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="introdution.html"><a href="introdution.html#thesis-statement"><i class="fa fa-check"></i><b>2.5</b> Thesis Statement</a></li>
+<li class="chapter" data-level="2.6" data-path="introdution.html"><a href="introdution.html#original-contributions"><i class="fa fa-check"></i><b>2.6</b> Original Contributions</a></li>
+<li class="chapter" data-level="2.7" data-path="introdution.html"><a href="introdution.html#research-questions"><i class="fa fa-check"></i><b>2.7</b> Research Questions</a></li>
+<li class="chapter" data-level="2.8" data-path="introdution.html"><a href="introdution.html#objectives-and-scope"><i class="fa fa-check"></i><b>2.8</b> Objectives and Scope</a>
+<ul>
+<li class="chapter" data-level="2.8.1" data-path="introdution.html"><a href="introdution.html#scope"><i class="fa fa-check"></i><b>2.8.1</b> Scope</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="introdution.html"><a href="introdution.html#front-facing-tools"><i class="fa fa-check"></i><b>2.9</b> Front-Facing Tools</a>
+<ul>
+<li class="chapter" data-level="2.9.1" data-path="introdution.html"><a href="introdution.html#slonimsky.app"><i class="fa fa-check"></i><b>2.9.1</b> Slonimsky.app</a></li>
+<li class="chapter" data-level="2.9.2" data-path="introdution.html"><a href="introdution.html#songbird"><i class="fa fa-check"></i><b>2.9.2</b> Songbird</a></li>
+</ul></li>
+<li class="chapter" data-level="2.10" data-path="introdution.html"><a href="introdution.html#dissertation-outline"><i class="fa fa-check"></i><b>2.10</b> Dissertation Outline</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="historical_background.html"><a href="historical_background.html"><i class="fa fa-check"></i><b>3</b> Historical Background: Approaches to Improving Playing by Ear in Jazz Music</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="historical_background.html"><a href="historical_background.html#the-aural-origins-of-jazz-education"><i class="fa fa-check"></i><b>3.0.1</b> The Aural Origins of Jazz Education</a></li>
+<li class="chapter" data-level="3.0.2" data-path="historical_background.html"><a href="historical_background.html#record-players-as-pedagogical-tools"><i class="fa fa-check"></i><b>3.0.2</b> Record Players as Pedagogical Tools</a></li>
+<li class="chapter" data-level="3.0.3" data-path="historical_background.html"><a href="historical_background.html#codification-of-jazz-education"><i class="fa fa-check"></i><b>3.0.3</b> Codification of Jazz Education</a></li>
+<li class="chapter" data-level="3.0.4" data-path="historical_background.html"><a href="historical_background.html#the-chord-scale-approach-pattern-books-and-melodic-vocabulary-acquisition"><i class="fa fa-check"></i><b>3.0.4</b> The Chord-Scale Approach, Pattern Books, and Melodic Vocabulary Acquisition</a></li>
+<li class="chapter" data-level="3.0.5" data-path="historical_background.html"><a href="historical_background.html#john-coltrane-and-slonimskys-thesaurus-aspirational-melodic-vocabulary-acquisition"><i class="fa fa-check"></i><b>3.0.5</b> John Coltrane and Slonimsky’s Thesaurus: Aspirational Melodic Vocabulary Acquisition</a></li>
+<li class="chapter" data-level="3.0.6" data-path="historical_background.html"><a href="historical_background.html#conclusion"><i class="fa fa-check"></i><b>3.0.6</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="modern_technological_approaches.html"><a href="modern_technological_approaches.html"><i class="fa fa-check"></i><b>4</b> Modern Technological Approaches to Ear Training</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="modern_technological_approaches.html"><a href="modern_technological_approaches.html#historical-development-of-ear-training-technology"><i class="fa fa-check"></i><b>4.1</b> Historical Development of Ear-Training Technology</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="modern_technological_approaches.html"><a href="modern_technological_approaches.html#transcription-software"><i class="fa fa-check"></i><b>4.1.1</b> Transcription software</a></li>
+<li class="chapter" data-level="4.1.2" data-path="modern_technological_approaches.html"><a href="modern_technological_approaches.html#chordharmonic-recognition-tools."><i class="fa fa-check"></i><b>4.1.2</b> Chord/Harmonic Recognition Tools.</a></li>
+<li class="chapter" data-level="4.1.3" data-path="modern_technological_approaches.html"><a href="modern_technological_approaches.html#rhythm-training-tools."><i class="fa fa-check"></i><b>4.1.3</b> Rhythm Training Tools.</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="modern_technological_approaches.html"><a href="modern_technological_approaches.html#non-commercial-and-research-initiatives"><i class="fa fa-check"></i><b>4.2</b> Non-Commercial and Research Initiatives</a></li>
+<li class="chapter" data-level="4.3" data-path="modern_technological_approaches.html"><a href="modern_technological_approaches.html#pedagogical-strategies-and-practical-use"><i class="fa fa-check"></i><b>4.3</b> Pedagogical Strategies and Practical Use</a></li>
+<li class="chapter" data-level="4.4" data-path="modern_technological_approaches.html"><a href="modern_technological_approaches.html#benefits-and-limitations"><i class="fa fa-check"></i><b>4.4</b> Benefits and Limitations</a></li>
+<li class="chapter" data-level="4.5" data-path="modern_technological_approaches.html"><a href="modern_technological_approaches.html#conclusion-1"><i class="fa fa-check"></i><b>4.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="playing_by_ear_literature_review.html"><a href="playing_by_ear_literature_review.html"><i class="fa fa-check"></i><b>5</b> Playing by Ear Research: A Literature Review</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="playing_by_ear_literature_review.html"><a href="playing_by_ear_literature_review.html#cognitive-and-neural-mechanisms-underlying-playing-by-ear"><i class="fa fa-check"></i><b>5.1</b> Cognitive and Neural Mechanisms Underlying Playing by Ear</a></li>
+<li class="chapter" data-level="5.2" data-path="playing_by_ear_literature_review.html"><a href="playing_by_ear_literature_review.html#developmental-and-pedagogical-aspects-of-playing-by-ear-skill-acquisition"><i class="fa fa-check"></i><b>5.2</b> Developmental and Pedagogical Aspects of Playing By Ear Skill Acquisition</a></li>
+<li class="chapter" data-level="5.3" data-path="playing_by_ear_literature_review.html"><a href="playing_by_ear_literature_review.html#practical-strategies-and-individual-differences-in-playing-by-ear"><i class="fa fa-check"></i><b>5.3</b> Practical Strategies and Individual Differences in Playing By Ear</a></li>
+<li class="chapter" data-level="5.4" data-path="playing_by_ear_literature_review.html"><a href="playing_by_ear_literature_review.html#conclusion-2"><i class="fa fa-check"></i><b>5.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="musicological_background.html"><a href="musicological_background.html"><i class="fa fa-check"></i><b>6</b> (Computational) Musicological Perspectives</a>
+<ul>
+<li class="chapter" data-level="6.0.1" data-path="musicological_background.html"><a href="musicological_background.html#music-and-combinatorics"><i class="fa fa-check"></i><b>6.0.1</b> Music and combinatorics</a></li>
+<li class="chapter" data-level="6.0.2" data-path="musicological_background.html"><a href="musicological_background.html#melodic-represention-and-computational-melodic-features"><i class="fa fa-check"></i><b>6.0.2</b> Melodic Represention and Computational Melodic Features</a></li>
+<li class="chapter" data-level="6.0.3" data-path="musicological_background.html"><a href="musicological_background.html#melody-as-cognitive-psychology"><i class="fa fa-check"></i><b>6.0.3</b> Melody as Cognitive Psychology</a></li>
+<li class="chapter" data-level="6.0.4" data-path="musicological_background.html"><a href="musicological_background.html#fuzzification"><i class="fa fa-check"></i><b>6.0.4</b> Fuzzification</a></li>
+<li class="chapter" data-level="6.0.5" data-path="musicological_background.html"><a href="musicological_background.html#computed-melodic-features-as-a-musicological-basis-for-selecting-items"><i class="fa fa-check"></i><b>6.0.5</b> Computed Melodic Features as a musicological basis for selecting items</a></li>
+<li class="chapter" data-level="6.0.6" data-path="musicological_background.html"><a href="musicological_background.html#pattern-books-as-item-banks"><i class="fa fa-check"></i><b>6.0.6</b> Pattern Books as Item Banks</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="cognitive_psychological_background.html"><a href="cognitive_psychological_background.html"><i class="fa fa-check"></i><b>7</b> Cognitive Psychology: General Principles of Learning and Memory</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="cognitive_psychological_background.html"><a href="cognitive_psychological_background.html#theoretical-background"><i class="fa fa-check"></i><b>7.1</b> Theoretical Background</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="cognitive_psychological_background.html"><a href="cognitive_psychological_background.html#memory-systems-and-retention"><i class="fa fa-check"></i><b>7.1.1</b> Memory Systems and Retention</a></li>
+<li class="chapter" data-level="7.1.2" data-path="cognitive_psychological_background.html"><a href="cognitive_psychological_background.html#learning-and-forgetting-curves"><i class="fa fa-check"></i><b>7.1.2</b> Learning and Forgetting Curves</a></li>
+<li class="chapter" data-level="7.1.3" data-path="cognitive_psychological_background.html"><a href="cognitive_psychological_background.html#short-term-vs.-long-term-forgetting"><i class="fa fa-check"></i><b>7.1.3</b> Short-Term vs. Long-Term Forgetting</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="cognitive_psychological_background.html"><a href="cognitive_psychological_background.html#key-findings-from-cognitive-psychology"><i class="fa fa-check"></i><b>7.2</b> Key Findings from Cognitive Psychology</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="cognitive_psychological_background.html"><a href="cognitive_psychological_background.html#ebbinghauss-forgetting-curve"><i class="fa fa-check"></i><b>7.2.1</b> Ebbinghaus’s Forgetting Curve</a></li>
+<li class="chapter" data-level="7.2.2" data-path="cognitive_psychological_background.html"><a href="cognitive_psychological_background.html#interference-and-consolidation"><i class="fa fa-check"></i><b>7.2.2</b> Interference and Consolidation</a></li>
+<li class="chapter" data-level="7.2.3" data-path="cognitive_psychological_background.html"><a href="cognitive_psychological_background.html#spacing-effect-and-distributed-practice"><i class="fa fa-check"></i><b>7.2.3</b> Spacing Effect and Distributed Practice</a></li>
+<li class="chapter" data-level="7.2.4" data-path="cognitive_psychological_background.html"><a href="cognitive_psychological_background.html#retrieval-practice"><i class="fa fa-check"></i><b>7.2.4</b> Retrieval Practice</a></li>
+<li class="chapter" data-level="7.2.5" data-path="cognitive_psychological_background.html"><a href="cognitive_psychological_background.html#cognitive-models-of-memory-and-optimal-scheduling"><i class="fa fa-check"></i><b>7.2.5</b> Cognitive Models of Memory and Optimal Scheduling</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="cognitive_psychological_background.html"><a href="cognitive_psychological_background.html#applications-in-language-learning"><i class="fa fa-check"></i><b>7.3</b> Applications in Language Learning</a></li>
+<li class="chapter" data-level="7.4" data-path="cognitive_psychological_background.html"><a href="cognitive_psychological_background.html#conclusion-3"><i class="fa fa-check"></i><b>7.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="statistical_modelling_frameworks.html"><a href="statistical_modelling_frameworks.html"><i class="fa fa-check"></i><b>8</b> Statistical Modelling Frameworks</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="statistical_modelling_frameworks.html"><a href="statistical_modelling_frameworks.html#item-response-theory"><i class="fa fa-check"></i><b>8.1</b> Item Response Theory</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="theoretical-model.html"><a href="theoretical-model.html"><i class="fa fa-check"></i><b>9</b> Playing By Ear: A Theoretical Model</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="theoretical-model.html"><a href="theoretical-model.html#pfordreshers-h-pac-model"><i class="fa fa-check"></i><b>9.1</b> Pfordresher’s H-PAC model</a></li>
+<li class="chapter" data-level="9.2" data-path="theoretical-model.html"><a href="theoretical-model.html#pfordreshers-cognitive-model-of-singing-accuracy"><i class="fa fa-check"></i><b>9.2</b> Pfordresher’s cognitive model of singing accuracy</a></li>
+<li class="chapter" data-level="9.3" data-path="theoretical-model.html"><a href="theoretical-model.html#bakers-computational-model-of-melodic-dictation"><i class="fa fa-check"></i><b>9.3</b> Baker’s computational model of melodic dictation</a></li>
+<li class="chapter" data-level="9.4" data-path="theoretical-model.html"><a href="theoretical-model.html#models-of-sung-recall"><i class="fa fa-check"></i><b>9.4</b> Models of sung recall</a></li>
+<li class="chapter" data-level="9.5" data-path="theoretical-model.html"><a href="theoretical-model.html#non-musical-models-of-serial-recall"><i class="fa fa-check"></i><b>9.5</b> Non-musical models of serial recall</a></li>
+<li class="chapter" data-level="9.6" data-path="theoretical-model.html"><a href="theoretical-model.html#wm-bits"><i class="fa fa-check"></i><b>9.6</b> WM bits</a></li>
+<li class="chapter" data-level="9.7" data-path="theoretical-model.html"><a href="theoretical-model.html#bringing-it-together"><i class="fa fa-check"></i><b>9.7</b> Bringing it together</a></li>
+<li class="chapter" data-level="9.8" data-path="theoretical-model.html"><a href="theoretical-model.html#moving-from-theoretical-to-computational"><i class="fa fa-check"></i><b>9.8</b> Moving from Theoretical to Computational</a>
+<ul>
+<li class="chapter" data-level="9.8.1" data-path="theoretical-model.html"><a href="theoretical-model.html#inputs"><i class="fa fa-check"></i><b>9.8.1</b> Inputs</a></li>
+<li class="chapter" data-level="9.8.2" data-path="theoretical-model.html"><a href="theoretical-model.html#sequential-construction"><i class="fa fa-check"></i><b>9.8.2</b> Sequential Construction</a></li>
+<li class="chapter" data-level="9.8.3" data-path="theoretical-model.html"><a href="theoretical-model.html#function-application"><i class="fa fa-check"></i><b>9.8.3</b> Function Application</a></li>
+</ul></li>
+<li class="chapter" data-level="9.9" data-path="theoretical-model.html"><a href="theoretical-model.html#mathematical-representation"><i class="fa fa-check"></i><b>9.9</b> Mathematical Representation</a></li>
+<li class="chapter" data-level="9.10" data-path="theoretical-model.html"><a href="theoretical-model.html#algorithm-flow"><i class="fa fa-check"></i><b>9.10</b> Algorithm Flow</a></li>
+<li class="chapter" data-level="9.11" data-path="theoretical-model.html"><a href="theoretical-model.html#final-equation"><i class="fa fa-check"></i><b>9.11</b> Final Equation</a></li>
+<li class="chapter" data-level="9.12" data-path="theoretical-model.html"><a href="theoretical-model.html#strategies"><i class="fa fa-check"></i><b>9.12</b> Strategies</a></li>
+<li class="chapter" data-level="9.13" data-path="theoretical-model.html"><a href="theoretical-model.html#learning-forgetting"><i class="fa fa-check"></i><b>9.13</b> Learning, forgetting</a></li>
+<li class="chapter" data-level="9.14" data-path="theoretical-model.html"><a href="theoretical-model.html#the-melodic-mind-as-item-bank"><i class="fa fa-check"></i><b>9.14</b> The Melodic Mind As Item Bank</a></li>
+<li class="chapter" data-level="9.15" data-path="theoretical-model.html"><a href="theoretical-model.html#predictions"><i class="fa fa-check"></i><b>9.15</b> Predictions:</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="computational-ecosystem.html"><a href="computational-ecosystem.html"><i class="fa fa-check"></i><b>10</b> A computational ecosystem</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="computational-ecosystem.html"><a href="computational-ecosystem.html#pyin"><i class="fa fa-check"></i><b>10.1</b> pyin:</a></li>
+<li class="chapter" data-level="10.2" data-path="computational-ecosystem.html"><a href="computational-ecosystem.html#psychologically-meaningful-musical-item-banks-itembankr"><i class="fa fa-check"></i><b>10.2</b> Psychologically meaningful musical item banks: itembankr</a></li>
+<li class="chapter" data-level="10.3" data-path="computational-ecosystem.html"><a href="computational-ecosystem.html#datasets"><i class="fa fa-check"></i><b>10.3</b> Datasets</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="computational-ecosystem.html"><a href="computational-ecosystem.html#wjd"><i class="fa fa-check"></i><b>10.3.1</b> WJD</a></li>
+<li class="chapter" data-level="10.3.2" data-path="computational-ecosystem.html"><a href="computational-ecosystem.html#berkowitz"><i class="fa fa-check"></i><b>10.3.2</b> Berkowitz</a></li>
+<li class="chapter" data-level="10.3.3" data-path="computational-ecosystem.html"><a href="computational-ecosystem.html#slonimsky"><i class="fa fa-check"></i><b>10.3.3</b> Slonimsky</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="computational-ecosystem.html"><a href="computational-ecosystem.html#other-useful-functions"><i class="fa fa-check"></i><b>10.4</b> Other useful functions</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="computational-ecosystem.html"><a href="computational-ecosystem.html#assessing-musical-behaviours-musicassessr"><i class="fa fa-check"></i><b>10.4.1</b> Assessing musical behaviours: musicassessr</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="computational-ecosystem.html"><a href="computational-ecosystem.html#ability-tests"><i class="fa fa-check"></i><b>10.5</b> Ability tests</a></li>
+<li class="chapter" data-level="10.6" data-path="computational-ecosystem.html"><a href="computational-ecosystem.html#conclusion-4"><i class="fa fa-check"></i><b>10.6</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="melsim_development.html"><a href="melsim_development.html"><i class="fa fa-check"></i><b>11</b> Experiment 1: Development of a melodic similarity algorithm for short recalled melodies</a></li>
+<li class="chapter" data-level="12" data-path="pbet_lab_study.html"><a href="pbet_lab_study.html"><i class="fa fa-check"></i><b>12</b> Experiment 2: An Explanatory Model Of Playing By Ear</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="pbet_lab_study.html"><a href="pbet_lab_study.html#methods"><i class="fa fa-check"></i><b>12.1</b> Methods</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="pbet_lab_study.html"><a href="pbet_lab_study.html#participants-and-preliminary-questionnaire"><i class="fa fa-check"></i><b>12.1.1</b> Participants and Preliminary Questionnaire</a></li>
+<li class="chapter" data-level="12.1.2" data-path="pbet_lab_study.html"><a href="pbet_lab_study.html#apparatus-and-general-procedure"><i class="fa fa-check"></i><b>12.1.2</b> Apparatus and General Procedure</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="pbet_online_study.html"><a href="pbet_online_study.html"><i class="fa fa-check"></i><b>13</b> Experiment 3: Modelling Melodic Difficulty in Playing by Ear: An Item Response Analysis of Online Performance Data</a></li>
+<li class="chapter" data-level="14" data-path="study_history_study.html"><a href="study_history_study.html"><i class="fa fa-check"></i><b>14</b> Experiment 4: A Longitudinal Study of Playing By Ear Skills</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="study_history_study.html"><a href="study_history_study.html#production-perception-paradigm"><i class="fa fa-check"></i><b>14.1</b> Production perception paradigm</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="similarity_study.html"><a href="similarity_study.html"><i class="fa fa-check"></i><b>15</b> Experiment 5: A similarity-based approach to item selection</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="similarity_study.html"><a href="similarity_study.html#collaborative-filtering"><i class="fa fa-check"></i><b>15.1</b> Collaborative filtering</a></li>
+<li class="chapter" data-level="15.2" data-path="similarity_study.html"><a href="similarity_study.html#approaches-to-similarity-for-large-scale-corpora"><i class="fa fa-check"></i><b>15.2</b> Approaches to similarity for large scale corpora</a></li>
+<li class="chapter" data-level="15.3" data-path="similarity_study.html"><a href="similarity_study.html#melodic-corpora-as-networks"><i class="fa fa-check"></i><b>15.3</b> Melodic corpora as networks</a>
+<ul>
+<li class="chapter" data-level="15.3.1" data-path="similarity_study.html"><a href="similarity_study.html#approach-1-similarity-of-features-as-proxy-for-melodic-similarity"><i class="fa fa-check"></i><b>15.3.1</b> Approach #1: similarity of features as proxy for melodic similarity</a></li>
+<li class="chapter" data-level="15.3.2" data-path="similarity_study.html"><a href="similarity_study.html#approach-2-generative-similarity"><i class="fa fa-check"></i><b>15.3.2</b> Approach #2: Generative similarity</a></li>
+<li class="chapter" data-level="15.3.3" data-path="similarity_study.html"><a href="similarity_study.html#approach-3-on-breaking-up-items-into-ngrams-store-representationssimilarity."><i class="fa fa-check"></i><b>15.3.3</b> Approach #3: on breaking up items into ngrams, store representations/similarity.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="additional-learning-paradigms.html"><a href="additional-learning-paradigms.html"><i class="fa fa-check"></i><b>16</b> Additional Learning Paradigms</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="additional-learning-paradigms.html"><a href="additional-learning-paradigms.html#generative-similarity"><i class="fa fa-check"></i><b>16.1</b> Generative similarity</a></li>
+<li class="chapter" data-level="16.2" data-path="additional-learning-paradigms.html"><a href="additional-learning-paradigms.html#identify-correct-vs-incorrect-ngrams-in-a-recall-add-incorrect-ngrams-to-beginning-of-session-buffer"><i class="fa fa-check"></i><b>16.2</b> identify correct vs incorrect ngrams in a recall: add incorrect ngrams to beginning of session buffer</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="experiment-6-model-synthesis-development-of-a-musical-dashsim-model.html"><a href="experiment-6-model-synthesis-development-of-a-musical-dashsim-model.html"><i class="fa fa-check"></i><b>17</b> Experiment 6: Model synthesis: Development of a musical DASH+SIM model</a></li>
+<li class="chapter" data-level="18" data-path="interventional_Study.html"><a href="interventional_Study.html"><i class="fa fa-check"></i><b>18</b> Experiment 7: An Interventional Study</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Playing By Ear: A Computational Approach</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introdution" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> Introduction<a href="introdution.html#introdution" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<blockquote>
+<p>“I don’t read music. I just need to hear it once and then I can play it.”<br />
+— <em>Derek Paravicini</em> <span class="citation">(Ockelford 2007)</span></p>
+</blockquote>
+<blockquote>
+<p>“You learned to speak before you could read. Why shouldn’t music be the same?”<br />
+— <em>Victor Wooten</em> <span class="citation">(Wooten 2008)</span></p>
+</blockquote>
+<p>In 1920s Ohio, a partially blind boy named Art Tatum sat at a player piano and listened to a roll of stride piano music. Without reading a single note of sheet music, and with vision so limited that he could barely see the keys, he listened - just once or twice - then placed his fingers on the keyboard and reproduced the piece note for note. Then, with a mischievous glint, he added flourishes and harmonic substitutions that surpassed what the original composer had written. This self-taught musical prodigy would go on to become one of the most revered jazz pianists of the 20th century—universally recognised for his astonishing ear, rapid improvisation, and harmonic imagination <span class="citation">(Lester 1995)</span>.</p>
+<p>However, Tatum’s genius was not rooted in formal conservatoire training. Instead, he learned almost exclusively by ear: from radio broadcasts, piano rolls, records, and live performances. This mode of learning - aural, intuitive, improvisational - stands in stark contrast to the notation-based pedagogy that dominates Western classical music education today. Yet, it is not unique to Tatum. From 19th-century savants like Blind Tom Wiggins, who reportedly memorised and reproduced full-length concert works by ear at the age of five <span class="citation">(Southall 2009)</span>, to contemporary musicians such as Derek Paravicini and Leslie Lemke—who, despite profound disabilities, are able to play complex pieces after a single hearing — playing by ear continues to reveal deep, and often mysterious, dimensions of musical cognition <span class="citation">(Ockelford 2007; Treffert 2009)</span>.</p>
+<p>What does it mean to play by ear? How do musicians mentally encode and reproduce sound without the aid of notation? How can this skill be enhanced effectively and efficiently? These questions bridge disciplines - encompassing general music education, jazz pedagogy, cognitive psychology, systematic musicology, and cultural history. While accounts of prodigies and savants capture the public imagination, they also illuminate fundamental cognitive skills: auditory memory, pattern recognition, improvisational logic, and emotional sensitivity. Moreover, many “ordinary” musicians - particularly in jazz and popular music - also learn and create by ear, suggesting that this way of engaging with music is not rare, but rather underappreciated within formal discourse, despite the fact that playing by ear skills also supports other musical skills, (e.g., sight-reading) because they help create useful representations which generalise to other musical skills <span class="citation">(McPherson, Bailey, and Sinclair 1997)</span> and the suggestion in the pedagogical literature that the paradigm of teaching music notation first, should be reversed and instead music should be taught from <em>“sound to sign”</em> <span class="citation">(<strong>inbook?</strong>)</span>.</p>
+<div id="what-is-playing-by-ear" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> What Is Playing By Ear?<a href="introdution.html#what-is-playing-by-ear" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this dissertation, I define playing by ear as the ability to reproduce an aurally presented melody on and instrument (including the voice). To play well by ear means to reproduce the musical properties of the heard melody accurately across relevant domains, such as pitch, interval and rhythmic structures. I note, that, precisely what these important musical structures to assess accuracy by are consist of is non-trivial, and something partly explored on this thesis in Chapter 7. I thus leave the definition relatively general at this point. To play badly by ear means to struggle to (accurately) reproduce the musical structures contained in the melody. Note that my definition separates playing by ear from “improvisation”, which is about spontaneously <em>generating</em> (new) ideas; not a faithful replication of that heard before.</p>
+</div>
+<div id="learning-to-play-by-ear" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Learning to Play By Ear<a href="introdution.html#learning-to-play-by-ear" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>I separate the general process of “playing by ear” from “learning to play by ear”, even though the two are intrinsically linked. “Playing by ear” presumes that the melody is sufficiently “pre-learned” to be recalled almost perfectly. Conversely, learning to play by ear is a separate process, whereby the melody to be recalled is not yet stable enough in memory to be reproduced faithfully. It will take specifically at least more than one attempt to be recalled accurately (i.e., potentially “revised” on each subsequent attempt) or may not be recallable in a given session. Thus, learning requires multiple attempts. Learning also requires that improvements are made over attempts, in the relative short term <span class="citation">(Silas and Müllensiefen 2023)</span>, but also over longer time periods.</p>
+</div>
+<div id="the-problem-domain-and-approach" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> The Problem Domain and Approach<a href="introdution.html#the-problem-domain-and-approach" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<blockquote>
+<p>“Data are profoundly dumb.”
+— <em>Judea Pearl and Dana Mackenzie</em> <span class="citation">(Pearl and Mackenzie 2018)</span></p>
+</blockquote>
+<p>This research focuses on how musicians - particularly those learning in traditions like jazz - acquire the ability to play melodies by ear. At the heart of this ability lies a complex set of cognitive, perceptual, and motor processes that transform a heard melody into a performed one, without reliance on written notation. While musicians have long developed this skill through immersion and repetition, this project asks: can we systematise and support this learning process through adaptive, computer-assisted methods?</p>
+<p>The central problem addressed here is how to select and deliver the most useful melodic material for learners to practise at any given time. More concretely, how can we build a system that responds to individual learning needs—tracking what a musician finds easy or difficult, what they are likely to forget, and what would help them progress? Instead of relying on fixed curricula or static pattern books, this research explores the potential of computational models to make such decisions in a dynamic, data-driven way, whilst also shedding light on the cognitive processes underpinning playing by ear abilities.</p>
+<p>The proposed solution adopts a practical approach: rather than solely relying on a fixed theory of musical difficulty or melodic structure, the system is designed to learn from new data—specifically, from how real learners interact with musical material. This reflects a broader empiricist tradition in music cognition and psychology, where the goal is to observe patterns and build models based on actual behaviour. Drawing from psychometric frameworks like item response theory to model what musical features make certain melodies easier or harder to play by ear and synthesising this with models of learning trajectories inspired by broader cognitive psychology, information is leveraged to tailor learning for each user.</p>
+<p>In contrast to more abstract approaches, this project is grounded in musical practice. The models are trained not on idealised musical forms but on melodies more likely to be used by real learners—such as transcribed jazz solos or pedagogical patterns from exercise books. The system is built with a strong focus on usability and feedback, aiming to be both a research tool and a practical aid for musicians.</p>
+<p>Lastly, as the title suggests, a “computational” approach is taken to tackle this question. In general, this refers to using computational methods to solve problem. But it also has the more specific meaning in cognitive science - to describe methods and models in a sufficiently precise way that someone else could reproduce it.</p>
+<p>Ultimately, this research brings together insights from music education, music psychology, cognitive science, and computer-assisted learning. It uses these to ask both empirical and applied questions, such as: What makes a melody hard to reproduce by ear - or learn to reproduce by ear? How does the mode of learning (by sight or sound) affect retention and performance? And how can we use this knowledge to build better learning environments for contemporary musicians?</p>
+</div>
+<div id="motivations" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Motivations<a href="introdution.html#motivations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Learning to play melodies by ear is often described as an essential musicianship skill (CITE) because it touches almost every domain of music-making: improvisation, memory, listening, interpretation, and expression. Despite its importance, however, playing by ear remains poorly understood in terms of the specific processes involved, and it is still largely taught through informal or experience-based methods. This project is motivated by a desire to bring clarity, structure, and modern learning tools to a domain that has traditionally relied on tacit knowledge.</p>
+<p>At the same time, we live in a moment where computational tools have become central to how we study music. Musicologists, psychologists, and educators alike are increasingly turning to data-driven approaches to understand how musical knowledge is formed, transmitted, and used. This project aligns with that shift. It explores how methods from psychometrics and computational learning can help unpack what’s happening when someone learns to play a melody by ear—and how we might support that learning more effectively.</p>
+<p>From a cognitive science perspective, playing by ear is a fascinating - and sophisticated - domain to study. It requires the integration of auditory perception, short- and long-term memory, motor control, and pattern recognition, all operating in a feedback loop (CITE PFORDRESHER). The ability to take a heard melody, internalise its structure, and translate it into action on an instrument is not only musically rich—it’s cognitively complex. Understanding this process gives us insights into broader questions about how musicians represent, store, and retrieve musical information.</p>
+<p>From a computational standpoint, the project draws inspiration from language learning technologies that personalise the delivery of vocabulary items to match the learner’s memory and skill state. Melodies, like words, can be seen as structured sequences with varying complexity, familiarity, and usefulness. This opens the door to modelling musical learning in ways that are already well-established in educational psychology but have rarely been less often applied to music.</p>
+<p>Finally, this work is motivated by a practical and pedagogical concern: many musicians—especially those in jazz and oral traditions—struggle to find tools that support their aural learning processes which are based on robust scientific principles. Existing “ear training” apps tend to focus on recognition rather than production, and they often lack adaptivity, theoretical grounding, or openness for academic use. This project aims to fill that gap by building an open-source system that is not only informed by theory but is also flexible, responsive, and grounded in real musical materials.</p>
+<p>In short, the motivation for this research lies at the intersection of four fields: cognitive psychology, systematic musicology, computational modelling, and educational practice. It is driven by both theoretical questions about how we learn music and practical concerns about how we can learn it better.</p>
+<p>The two main problems this thesis attempts to solve is:</p>
+<ol style="list-style-type: upper-roman">
+<li><p><strong>A Computational Model of Playing By Ear Abilities</strong>: Given an aurally presented melody as input and a reproduction of that melody by a performer as output, what are the cognitive processes underlying performance? Can input characteristics about a given performer and the melody to be performed predict subsequent output accurately? This problem is one of developing a) a <em>cognitive, computational model</em> of <em>playing by ear</em> skills. Extending such a model, how do b) people <em>learn</em> to play by ear? Based on such knowledge, how can people learn to play by ear more <em>effectively</em>?</p></li>
+<li><p><strong>Selecting melodic material for people to effectively enhance their playing by ear skills</strong>: Based on the computational model devised above, the second problem is that of selecting new melodic material to learn to improve playing by ear skills. How can we <em>curate</em> melodic material, <em>select</em> from it, and potentially <em>generate</em> new optimum material for learners to enhance their playing by ear skills more effectively than the use of manual methods alone.</p></li>
+</ol>
+<div id="generalising-beyond-jazz-and-playing-by-ear" class="section level3 hasAnchor" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Generalising Beyond Jazz and Playing By Ear<a href="introdution.html#generalising-beyond-jazz-and-playing-by-ear" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Whilst this thesis is initially motivated historically and pedagogically in terms of jazz education, it is assumed that many of the outcomes will be relevant to the playing by ear of melodies in general. In other words, it assumed that, whilst there will be domain-specific findings, much of the work should shed light on the cognitive processes underlying melodic memory and learning in general. In this way, much of the approach and findings should logically extend to the realm of <em>singing</em> (by ear) too, which is far more ubiquitous. Since virtually everyone can sing (CITE) but far fewer people have access to an instrument beyond the voice (CITE), I will often discuss singing by ear and borrow from this literature. In general, much of the cognitive processes behind singing and playing by ear should be very similar.</p>
+<p>I thus suggest that the outcomes of this dissertation are not only relevant to jazz musicians, but can have a much larger impact, for musicians and musics of all kinds - at least in principle. In practice, model specifics may need adapting for utmost relevance to other domains.</p>
+</div>
+</div>
+<div id="thesis-statement" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Thesis Statement<a href="introdution.html#thesis-statement" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The thesis proposed in this dissertation is that computer-assisted learning systems - designed in alignment with cognitive psychology, psychometric modelling, and computational music analysis - can substantially improve the acquisition of melodic playing by ear skills in music learners. This research is grounded in the belief that automated, adaptive systems informed by statistical and psychological principles can serve as effective tools for developing musicianship skills that traditionally rely on subjective teaching and rote learning.</p>
+<p>Specifically, the present research investigates the following key questions:</p>
+<ul>
+<li><p>What psychometric and computational features of melodic stimuli best predict difficulty in playing by ear tasks?</p></li>
+<li><p>How can a computerised adaptive system deliver melodies in a way that maximally supports durable learning and personalised progression?</p></li>
+<li><p>What are the empirical effects of such a system compared to traditional, non-adaptive methods for learning melodies?</p></li>
+</ul>
+<p>To answer these questions, the research adopts a multi-part approach involving the development of new psychometrically valid tests, statistical modelling of melodic corpora, and the design and evaluation of an adaptive training system. The methodologies draw on the fields of music psychology, psychometrics and statistical modelling/machine learning and the system is developed using open-source technologies to ensure accessibility and reproducibility. This research also leverages insights from language learning and item response theory to address the cognitive dimensions of musical learning and proposes novel mechanisms for real-time assessment and personalised item delivery.</p>
+</div>
+<div id="original-contributions" class="section level2 hasAnchor" number="2.6">
+<h2><span class="header-section-number">2.6</span> Original Contributions<a href="introdution.html#original-contributions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This dissertation makes several original contributions across the domains of music psychology, psychometrics, computational music analysis, and music education technology.</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Development of an Automated Playing by Ear Test</strong>
+A key contribution is the creation of a fully automated, computer-scored playing by ear ability test. Unlike previous assessments, this test allows for real-time behavioural scoring, enabling scalable and objective evaluation of melodic ear-to-hand coordination. This test lays the empirical foundation for later adaptive training applications and contributes a novel psychometric tool for music research and education.</p></li>
+<li><p><strong>Psychometric Modelling of Melodic Item Difficulty</strong>
+Through item response theory and explanatory modelling, this research identifies and quantifies the features (e.g., tonality, melodic contour, interval structure) that make melodic items more or less difficult for learners. These findings enhance theoretical understanding of melodic cognition and provide empirical guidelines for designing effective learning materials.</p></li>
+<li><p><strong>Creation of an Adaptive Training System for Melodic Learning</strong>
+The dissertation proposes and implements an adaptive computer-assisted learning (CAL) system that dynamically selects and delivers melodic stimuli based on real-time learner performance. By incorporating spaced repetition and similarity-based item delivery algorithms, the system optimises both the efficiency and longevity of learning.</p></li>
+<li><p><strong>Digitisation and Optimisation of Melodic Corpora</strong>
+This research includes the development of software tools (e.g., itembankr, musicassessr) that process and structure melodic corpora (e.g., jazz transcriptions, pedagogical pattern books) into statistically characterisable item banks. This facilitates both learning and research, enabling a data-driven approach to musical skill acquisition.</p></li>
+<li><p><strong>Empirical Evaluation through Controlled Interventions</strong>
+The final component of the project involves a controlled intervention study that compares the adaptive CAL system against traditional learning methods. The study evaluates long-term retention, learning efficiency, and user satisfaction, offering concrete evidence for the effectiveness of the proposed system.</p></li>
+</ol>
+<p>Together, these contributions represent a significant advancement in how musical skills—particularly those related to improvisation and aural learning—can be taught and understood through technology. The research also delivers openly available software and data, providing a platform for future studies and educational applications.</p>
+</div>
+<div id="research-questions" class="section level2 hasAnchor" number="2.7">
+<h2><span class="header-section-number">2.7</span> Research Questions<a href="introdution.html#research-questions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>At its core, this dissertation seeks to answer the primary question:</p>
+<blockquote>
+<p><strong>PRQ1: How can one effectively learn to play by ear (PBE)?</strong></p>
+</blockquote>
+<p>This is explored through four intersecting lenses—<strong>psychological</strong>, <strong>musicological</strong>, <strong>computational</strong>, and <strong>pedagogical</strong>—each of which shapes how the skill of playing by ear can be understood, modelled, and improved.</p>
+<p>To address this overarching problem, several more specific research questions are posed:</p>
+<ul>
+<li><p><strong>SRQ1: What makes playing by ear difficult?</strong><br />
+<em>(Exploring psychological and music-theoretical factors such as memory, melodic complexity, and contour.)</em></p></li>
+<li><p><strong>SRQ2: Can a computer application that dynamically selects practice material help learners improve faster?</strong><br />
+<em>(Assessing the role of computational adaptivity in musical skill acquisition.)</em></p></li>
+<li><p><strong>SRQ3: What needs to be taken into account by such a model of adaptive learning?</strong><br />
+<em>(Investigating features like difficulty, adaptivity, spacing, and history—the DASH model—as key inputs.)</em></p></li>
+<li><p><strong>SRQ4: Does the mode of presentation (visual notation vs. auditory listening) influence how well a melody is learned?</strong><br />
+<em>(Examining modality effects on encoding, retention, and recall.)</em></p></li>
+<li><p><strong>SRQ5: Does singing a melody before playing it aid the learning process?</strong><br />
+<em>(Exploring embodied cognition and internal audiation as pedagogical tools.)</em></p></li>
+<li><p><strong>SRQ6: To what extent is PBE driven by absolute pitch abilities versus relative pitch strategies?</strong></p></li>
+<li><p><strong>SRQ7: What is the relationship between general cognitive capacities—like working memory—and PBE, and how do they interact with musical training?</strong></p></li>
+</ul>
+<p>In addition, the project explores the connection between <strong>sight-reading</strong> and <strong>PBE</strong> skills, asking whether the two are complementary, independent, or perhaps grounded in shared underlying mechanisms.</p>
+<p>A second overarching question guides the later stages of the project:</p>
+<blockquote>
+<p><strong>PRQ2: Can an intervention—specifically, an adaptive, computational learning system—lead to measurable improvements in PBE performance?</strong></p>
+</blockquote>
+<p>This question shifts from theory to application, testing whether a system built on the insights above actually works in practice. The broader aim is not only to build such a system but also to evaluate its effectiveness in real learning contexts through controlled experimental studies.</p>
+<p>Finally, the project engages with what might be called the <strong>“Coltrane-Slonimsky Problem”</strong>:</p>
+<blockquote>
+<p><em>Given a vast landscape of melodic material, how can one select items that are both suitably challenging and musically engaging for the learner?</em></p>
+</blockquote>
+<p>Solving this requires balancing <strong>psychological difficulty</strong> with <strong>artistic relevance</strong>—a challenge that lies at the intersection of <strong>computation</strong> and <strong>musicianship</strong>.</p>
+</div>
+<div id="objectives-and-scope" class="section level2 hasAnchor" number="2.8">
+<h2><span class="header-section-number">2.8</span> Objectives and Scope<a href="introdution.html#objectives-and-scope" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In response to the research questions above, the dissertation pursues the following concrete objectives:</p>
+<ul>
+<li><p>To empirically examine what makes melodies difficult to learn by ear, using <strong>item response theory</strong> and performance data to model melodic difficulty based on psychological and structural features.</p></li>
+<li><p>To develop and validate a <strong>computerised PBE ability test</strong>, capable of recording, scoring, and tracking melodic performance in real time, forming the foundation for adaptive learning.</p></li>
+<li><p>To design and implement an <strong>adaptive learning system</strong>—the <code>Songbird</code> platform—that delivers personalised melodic training based on individual user profiles, learning history, and cognitive principles.</p></li>
+<li><p>To digitise, analyse, and optimise <strong>melodic corpora</strong> from both real jazz transcriptions and pedagogical pattern books—converting them into structured item banks for learning (<code>slonimsky.app</code>).</p></li>
+<li><p>To investigate <strong>pedagogical strategies</strong>, including the impact of presentation modality (visual vs. auditory) and the use of <strong>singing</strong> as a preparatory step in melodic reproduction.</p></li>
+<li><p>To run an <strong>interventional study</strong> evaluating the system’s effectiveness, measuring whether the adaptive system leads to improved learning outcomes compared to traditional or non-adaptive methods.</p></li>
+<li><p>To make all <strong>tools and datasets</strong> freely available as open-source software, supporting further research and application in music cognition, education, and human-computer interaction.</p></li>
+</ul>
+<div id="scope" class="section level3 hasAnchor" number="2.8.1">
+<h3><span class="header-section-number">2.8.1</span> Scope<a href="introdution.html#scope" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The scope of this research is intentionally delimited in several ways:</p>
+<ul>
+<li><p><strong>Musical focus:</strong> The primary context is jazz and related genres where playing by ear is central. However, the underlying cognitive and computational models may generalise to other traditions.</p></li>
+<li><p><strong>Task type:</strong> The project focuses specifically on <strong>melodic ear-to-hand coordination</strong>—reproducing heard melodies on an instrument without notation—rather than broader definitions of improvisation or harmonic ear training.</p></li>
+<li><p><strong>User level:</strong> While designed with <strong>advanced students and self-directed learners</strong> in mind, the systems developed may also support novices or be used in classroom settings as a pedagogical supplement.</p></li>
+<li><p><strong>Musical representation:</strong> Melodies are treated <strong>symbolically</strong> as discrete event sequences (pitches, intervals), allowing for clean computational modelling. Audio processing is not the focus, though real-world audio is considered in some experiments.</p></li>
+<li><p><strong>Methodological scope:</strong> The project blends <strong>controlled experiments</strong>, <strong>computational modelling</strong>, and <strong>tool development</strong>. It does not aim to exhaustively model all aspects of musical improvisation or ear training but rather to provide a focused and rigorous foundation for future research.</p></li>
+</ul>
+</div>
+</div>
+<div id="front-facing-tools" class="section level2 hasAnchor" number="2.9">
+<h2><span class="header-section-number">2.9</span> Front-Facing Tools<a href="introdution.html#front-facing-tools" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="slonimsky.app" class="section level3 hasAnchor" number="2.9.1">
+<h3><span class="header-section-number">2.9.1</span> Slonimsky.app<a href="introdution.html#slonimsky.app" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Slonimsky.app</strong> is a digital interface and training tool aimed at advanced learners, particularly within jazz and improvisation-rich traditions. Named in homage to Nicolas Slonimsky’s <em>Thesaurus of Scales and Melodic Patterns</em>, this application converts melodic content from jazz solos, pattern books, and pedagogical sources into a searchable, adaptive item bank. The goal is to solve the “Coltrane-Slonimsky Problem”: given a wide field of musical possibilities, how can we find the next melody that’s optimally challenging and musically rewarding?</p>
+<p>Slonimsky.app incorporates models of difficulty and melodic similarity, allowing learners to explore and practice material personalised to their evolving skill level. It supports improvisers and ear-trained musicians in expanding their vocabulary in a structured yet musically sensitive way.</p>
+</div>
+<div id="songbird" class="section level3 hasAnchor" number="2.9.2">
+<h3><span class="header-section-number">2.9.2</span> Songbird<a href="introdution.html#songbird" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Songbird</strong> (<em>songbird.training</em>) is designed as a psychometrically informed tool to support the development of singing and melodic memory in younger learners and educational settings. It provides a streamlined, browser-based interface that presents melodic stimuli, records vocal reproductions, and assesses performance in real time.</p>
+<p>Built to function both as a research platform and educational tool, <em>Songbird</em> tracks individual progress and adapts the difficulty of stimuli over time. It also includes pedagogical modules that integrate singing as a foundational step in melodic learning—supporting the hypothesis that vocal practice aids both memory and instrumental imitation. It is particularly well-suited for use in schools, choirs, and youth music programmes.</p>
+</div>
+</div>
+<div id="dissertation-outline" class="section level2 hasAnchor" number="2.10">
+<h2><span class="header-section-number">2.10</span> Dissertation Outline<a href="introdution.html#dissertation-outline" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>First, I will motivate my discussion of learning to play by ear with some historical context around the traditional methods that have been used, particularly with in the context of learning to play jazz music in the 20th and then 21st century. Then, I will largely leave this historical context behind and motivate the question from systematic musicological and cognitive psychological points of view, where the remainder of this manuscript will largely remain.</p>
+<p>As discussed, there are two (related) principal problems that this thesis aims to tackle. First, since, as of yet, there exists no comprehensive computational model of playing by ear skills (in terms of both acquisition and utilisation), I intend to first propose a theoretical model based on a synthesis of related literature. Once described, I seek to investigate and validate parts of this proposed model in light of empirical data. The second principal problem is to, given such a computational model, design a computer application which helps playing by ear learners more efficiently improve their skills. This part of the thesis has a practical deliverable component that is intended to be used in real-life learning situations, whilst being situated in a scientific framework - both theoretical and statistical. Such an application would be proposed in an open source framework that can be extended by future developers to add new features and improve existing components of the application. The main problem the application intends to solve is one of <em>item selection</em> i.e., finding “optimum” playing by ear items to learn for a given learner, at a given timepoint.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="historical_background.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

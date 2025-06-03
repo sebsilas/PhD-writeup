@@ -2,11 +2,37 @@
 # Introduction {#introduction}
 
 
-Something anecdotal to get the thing moving
+> "I don’t read music. I just need to hear it once and then I can play it."  
+> — *Derek Paravicini* [@ockelford2007music]
+
+
+
+> "You learned to speak before you could read. Why shouldn't music be the same?"  
+> — *Victor Wooten* [@wooten2008music]
+
+
+In 1920s Ohio, a partially blind boy named Art Tatum sat at a player piano and listened to a roll of stride piano music. Without reading a single note of sheet music, and with vision so limited that he could barely see the keys, he listened - just once or twice - then placed his fingers on the keyboard and reproduced the piece note for note. Then, with a mischievous glint, he added flourishes and harmonic substitutions that surpassed what the original composer had written. This self-taught musical prodigy would go on to become one of the most revered jazz pianists of the 20th century—universally recognised for his astonishing ear, rapid improvisation, and harmonic imagination [@lester1995tatum].
+
+However, Tatum’s genius was not rooted in formal conservatoire training. Instead, he learned almost exclusively by ear: from radio broadcasts, piano rolls, records, and live performances. This mode of learning - aural, intuitive, improvisational - stands in stark contrast to the notation-based pedagogy that dominates Western classical music education today. Yet, it is not unique to Tatum. From 19th-century savants like Blind Tom Wiggins, who reportedly memorised and reproduced full-length concert works by ear at the age of five [@southall2009blindtom], to contemporary musicians such as Derek Paravicini and Leslie Lemke—who, despite profound disabilities, are able to play complex pieces after a single hearing — playing by ear continues to reveal deep, and often mysterious, dimensions of musical cognition [@ockelford2007music; @treffert2009islands].
+
+What does it mean to play by ear? How do musicians mentally encode and reproduce sound without the aid of notation? How can this skill be enhanced effectively and efficiently? These questions bridge disciplines - encompassing general music education, jazz pedagogy, cognitive psychology, systematic musicology, and cultural history. While accounts of prodigies and savants capture the public imagination, they also illuminate fundamental cognitive skills: auditory memory, pattern recognition, improvisational logic, and emotional sensitivity. Moreover, many "ordinary" musicians - particularly in jazz and popular music - also learn and create by ear, suggesting that this way of engaging with music is not rare, but rather underappreciated within formal discourse, despite the fact that playing by ear skills also supports other musical skills, (e.g., sight-reading) because they help create useful representations which generalise to other musical skills [@mcphersonPathAnalysisTheoretical1997] and the suggestion in the pedagogical literature that the paradigm of teaching music notation first, should be reversed and instead music should be taught from *"sound to sign"* [@inbook].
+
+
+## What Is Playing By Ear?
+
+In this dissertation, I define playing by ear as the ability to reproduce an aurally presented melody on and instrument (including the voice). To play well by ear means to reproduce the musical properties of the heard melody accurately across relevant domains, such as pitch, interval and rhythmic structures. I note, that, precisely what these important musical structures to assess accuracy by are consist of is non-trivial, and something partly explored on this thesis in Chapter 7. I thus leave the definition relatively general at this point. To play badly by ear means to struggle to (accurately) reproduce the musical structures contained in the melody. Note that my definition separates playing by ear from "improvisation", which is about spontaneously *generating* (new) ideas; not a faithful replication of that heard before.
+
+## Learning to Play By Ear
+
+I separate the general process of "playing by ear" from "learning to play by ear", even though the two are intrinsically linked. "Playing by ear" presumes that the melody is sufficiently "pre-learned" to be recalled almost perfectly. Conversely, learning to play by ear is a separate process, whereby the melody to be recalled is not yet stable enough in memory to be reproduced faithfully. It will take specifically at least more than one attempt to be recalled accurately (i.e., potentially "revised" on each subsequent attempt) or may not be recallable in a given session. Thus, learning requires multiple attempts. Learning also requires that improvements are made over attempts, in the relative short term [@silasLearningRecallingMelodies2023], but also over longer time periods.
+
 
 ## The Problem Domain and Approach
 
-This research focuses on how musicians—particularly those learning in traditions like jazz—acquire the ability to play melodies by ear. At the heart of this ability lies a complex set of cognitive, perceptual, and motor processes that transform a heard melody into a performed one, without reliance on written notation. While musicians have long developed this skill through immersion and repetition, this project asks: can we systematise and support this learning process through adaptive, computer-assisted methods?
+> "Data are profoundly dumb." 
+> — *Judea Pearl and Dana Mackenzie* [@pearlBookWhyNew2018]
+
+This research focuses on how musicians - particularly those learning in traditions like jazz - acquire the ability to play melodies by ear. At the heart of this ability lies a complex set of cognitive, perceptual, and motor processes that transform a heard melody into a performed one, without reliance on written notation. While musicians have long developed this skill through immersion and repetition, this project asks: can we systematise and support this learning process through adaptive, computer-assisted methods?
 
 The central problem addressed here is how to select and deliver the most useful melodic material for learners to practise at any given time. More concretely, how can we build a system that responds to individual learning needs—tracking what a musician finds easy or difficult, what they are likely to forget, and what would help them progress? Instead of relying on fixed curricula or static pattern books, this research explores the potential of computational models to make such decisions in a dynamic, data-driven way, whilst also shedding light on the cognitive processes underpinning playing by ear abilities.
 
@@ -39,7 +65,7 @@ I) **A Computational Model of Playing By Ear Abilities**: Given an aurally prese
 
 II) **Selecting melodic material for people to effectively enhance their playing by ear skills**: Based on the computational model devised above, the second problem is that of selecting new melodic material to learn to improve playing by ear skills. How can we *curate* melodic material, *select* from it, and potentially *generate* new optimum material for learners to enhance their playing by ear skills more effectively than the use of manual methods alone.
 
-### Generalising beyond jazz and playing by ear
+### Generalising Beyond Jazz and Playing By Ear
 
 Whilst this thesis is initially motivated historically and pedagogically in terms of jazz education, it is assumed that many of the outcomes will be relevant to the playing by ear of melodies in general. In other words, it assumed that, whilst there will be domain-specific findings, much of the work should shed light on the cognitive processes underlying melodic memory and learning in general. In this way, much of the approach and findings should logically extend to the realm of *singing* (by ear) too, which is far more ubiquitous. Since virtually everyone can sing (CITE) but far fewer people have access to an instrument beyond the voice (CITE), I will often discuss singing by ear and borrow from this literature. In general, much of the cognitive processes behind singing and playing by ear should be very similar. 
 
@@ -48,7 +74,7 @@ I thus suggest that the outcomes of this dissertation are not only relevant to j
 
 ## Thesis Statement
 
-The thesis proposed in this dissertation is that computer-assisted learning systems—designed in alignment with cognitive psychology, psychometric modelling, and computational music analysis—can substantially improve the acquisition of melodic playing by ear skills in music learners. This research is grounded in the belief that automated, adaptive systems informed by statistical and psychological principles can serve as effective tools for developing musicianship skills that traditionally rely on subjective teaching and rote learning.
+The thesis proposed in this dissertation is that computer-assisted learning systems - designed in alignment with cognitive psychology, psychometric modelling, and computational music analysis - can substantially improve the acquisition of melodic playing by ear skills in music learners. This research is grounded in the belief that automated, adaptive systems informed by statistical and psychological principles can serve as effective tools for developing musicianship skills that traditionally rely on subjective teaching and rote learning.
 
 Specifically, the present research investigates the following key questions:
 
