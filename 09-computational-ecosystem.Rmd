@@ -10,16 +10,16 @@ To not detract from the theoretical questions in this manuscript, I will only gi
 
 I will start with the low-level packages and work my way up to the higher level ones.
 
-## Transcription of melodic production data: pyin
+## Transcription of Melodic Production Data: pyin
 
 To be able to assess music production data, it is first necessary to transcribe
 
 
-## Assessment of melodic similarity: melsim
+## Assessment of Melodic Similarity: melsim
 
 
 
-## Psychologically meaningful musical item banks: itembankr 
+## Psychologically Meaningful Musical Item Banks: itembankr 
 
 In my literature review, I noted that pattern books and melodic repositories have emerged to support jazz improvisation and acquiring inner melodic representations. Such books present itemised melodic patterns to stimulate compositional ideas or so that training musicians can practise acquiring cognitive representations of new melodic material  (Lateef, 2015; Weiskopf, 2015; Slonimsky, 1947; Ricker, 1999). Such books are essentially *corpora* or *item banks* of melodic grammar and possibilities. As well as improving one’s melodic "vocabulary", such books can be used to develop technical prowess, by challenging the player to acquire new action patterns to perform the items. 
 

@@ -1,5 +1,6 @@
 
 bookdown::gitbook:
+  output_dir: "_book"
   toc_depth: 2
   config:
     toc:

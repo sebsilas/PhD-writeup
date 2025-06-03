@@ -3,7 +3,7 @@ name: Render and Deploy Bookdown
 on:
   push:
     branches:
-      - master  # Corrected from 'maste'
+      - master
 
 jobs:
   build:
@@ -28,7 +28,7 @@ jobs:
           Rscript -e 'install.packages(c("bookdown", "rmarkdown"))'
 
       - name: Render book
-        run: Rscript -e 'bookdown::render_book("index.Rmd")'
+        run: Rscript -e 'bookdown::render_book("index.Rmd", output_dir = "_book")'
 
       - name: Upload book artifact
         uses: actions/upload-artifact@v4
