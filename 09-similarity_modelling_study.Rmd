@@ -7,20 +7,37 @@
 
 
 
+```{r, warning = FALSE, message = FALSE}
 
-``` r
 # library(recommenderlab) 
 library(magrittr)
+
 ```
 
 
+```{r, include = FALSE}
 
 
+load(file = '~/SAA_Paper_2022/data/exp2/output_data/dat6.rda')
 
 
+```
 
 
-``` r
+```{r, include = FALSE}
+
+recommend_n_melodies_lambda <- function(...) {
+  data <- list(...)
+  p_id <- data$p_id
+  n < data$n
+  recommend_n_melodies(p_id, n) %>%
+    jsonlite::toJSON(list(itemIds = recommended_items),auto_unbox = TRUE)
+}
+
+```
+
+```{r, eval = FALSE}
+
 #' recommend_n_melodies
 #'
 #' @param p_id A valid p_id to recommend top n melodies for
@@ -77,14 +94,16 @@ recommend_n_melodies <- function(p_id, n){
   logging::loginfo("Recommendations generated, returning to client")
   recommended_items
 }
+
 ```
 
+```{r eval = FALSE}
 
-``` r
 t <- recommend_n_melodies(p_id = sample(unique(dat$p_id), size = 1),
                     n = 10)
 
 t
+
 ```
 
 
@@ -93,9 +112,19 @@ t
 ## Approaches to Similarity for Large-Scale Corpora
 
 
+```{r, include = FALSE}
 
+# Problem:
 
+# WJD_no_items <- nrow(WJD::WJD('phrases'))
 
+```
+
+```{r, include = FALSE}
+
+# factorial(WJD_no_items)
+
+```
 
 
 ## Melodic corpora as networks 

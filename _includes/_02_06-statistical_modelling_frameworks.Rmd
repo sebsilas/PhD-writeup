@@ -2,6 +2,16 @@
 
 ## Statistical Modelling Frameworks {#statistical_modelling_frameworks}
 
-### Item Response Theory
+### Cognitive Modelling Item Feature Modelling via Item Response Theory
 
-- A way of connecting the musicological representations discussed earlier to measured human performance. Integrating approaches
+
+Performance on an ability test can vary as a function of individual differences (i.e., some participants have a higher ability than others), but also as a function of items themselves (i.e., some items may be more difficult than others). As previously discussed, quantitative features can be computed for melodies across various domains (e.g., tonality, contour, rhythm). Such emergent features clearly rely on high-level mental representations and templates (i.e., musical knowledge) and thus should predict performance. Consequently, there can be significant variance in complexity when a melody is the item of testing, and these kind of item difficulties are important to model. We here compute melodic representations can be quantified for each melodic item across important dimensions [@mullensiefenFANTASTICFeatureANalysis2009].
+
+
+In order to formally relate structural features of melodies to the cognitive difficulty of melody processing, the main methodological approach we utilise here is *explanatory item-response theory* (*IRT*; @deboeckExplanatoryItemResponse2016). In this paper, *IRT* can be considered our first level of modelling, where melodic features become predictors of the *opti3* similarity score, which we take as representing variance in both singing accuracy and melodic memory. *IRT* is useful for our enquiry since it allows the simultaneous modelling of item difficulties and individual differences together via mixed effects modelling, whilst compartmentalising the variance into fixed item effects (melodic features), random item effects (unexplained effects due to melodic items) and participant effects (effects due to individual participants' abilities). Additionally, an *IRT* model can be the basis of creating an adaptive test, which is highly efficient and can be variable in test length, since encoding relationships between item features and performance can be used to generate or select items based on modeled difficulties [for similar approaches see @geldingEfficientAdaptiveTest2021; @harrisonApplyingModernPsychometric2017; @harrisonDevelopmentValidationComputerised2018; @harrisonModellingMelodicDiscrimination2016; @tsigemanJackJillAdaptive2022]. Such an adaptive test can hence be employed flexibly, with potential applications in education.
+
+In this paper, our strategy to relate singing accuracy to melodic memory is to extract participant and item level scores from our *IRT* mixed effects models and use these outputs in further modelling. For instance, we use participant-level scores to represent individual differences in overall melodic memory and singing ability, and participant level indicators of singing accuracy alone (comprising e.g., single long note singing, singing accuracy, precision), to predict such outputs. This allows us to evaluate the potential extent that low-level singing abilities are responsible for the overall variance in singing performance, leaving the rest to do with variance in melodic memory, or being unexplained.
+
+As suggested by previous literature in [@bakerModelingMelodicDictation2019; @dreyfusRecognitionLeitmotivesRichard2016; @harrisonModellingMelodicDiscrimination2016; @silasLearningRecallingMelodies2023; @silasSingingAbilityAssessment2023], there are several melodic features which could indicate an item's complexity and predict playing by ear performance performance (e.g., tonality, interval contour, a melody's frequency in occurrence).
+
+

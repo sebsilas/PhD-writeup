@@ -59,6 +59,14 @@ Antoine Sachet, James Petticrew,
 Annabel Cohen
 
 
+<!-- for graphics -->
+
+<!--
+
+<a href="https://www.flaticon.com/free-icons/saxophone" title="saxophone icons">Saxophone icons created by Nsit - Flaticon</a>
+
+-->
+
 ## Table of Contents {#toc}
 
 ```{r child="_includes/_toc_content.Rmd"}

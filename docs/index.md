@@ -2,7 +2,7 @@
 ---
 title: "Playing By Ear: A Computational Approach"
 author: "Seb Silas"
-date: "2025-06-03"
+date: "2025-06-06"
 site: bookdown::bookdown_site
 output:
   bookdown::gitbook: default
@@ -58,6 +58,14 @@ Antoine Sachet, James Petticrew,
 
 Annabel Cohen
 
+
+<!-- for graphics -->
+
+<!--
+
+<a href="https://www.flaticon.com/free-icons/saxophone" title="saxophone icons">Saxophone icons created by Nsit - Flaticon</a>
+
+-->
 
 ## Table of Contents {#toc}
 

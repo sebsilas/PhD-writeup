@@ -1,21 +1,75 @@
 
 
-<!-- ## Empirical Foundations section -->
-
-
-Having motivated this work in terms of historical context up to contemporary technological approaches to improving playing by ear skills, I will now turn to motivating it in terms of the more specific epistemological approaches taken to assess this question in this dissertation. These approaches are: systematic musicological, psychological, and computational. In general, these approaches come from the *scientific approach*, whereas the content reviewed in the last chapter was largely not based on such an approach.
-
-
-
 ## Computational Musicological Perspectives {#musicological_background}
 
+
+Computational musicological approaches help motivate or solve three general problems in the present thesis: 1) some basic mathematics illustrate and motivate the problem of *melodic combinatorics* and I discuss how *corpus analysis* can help deal with combinatoric problems, 2) *computational melodic feature analysis* helps solve the problem of *item selection* and 3) *melodic similarity* research helps solve the problem of *score computation* regarding the accuracy of participants recalling melodies by ear in relation to a target melody. In this section, I will explore these areas and their relevance to the present thesis.
 
 
 ### Music and Combinatorics
 
-The derivation of Slonimsky's *Thesaurus* - a new to document and rationalise logical melodic vocabulary - leads to a more general issue around combinatorics and musical (melodic) material.
 
-- Introduce notion of large melodic learning vocabularies (LMLVs), ?
+As discussed in the section on historical context, Nicolas Slonimsky derived his *Thesaurus of Scales and Melodic Patterns*. This was essentially an attempt to document and systematise the possibilities within the twelve-tone system to unlock new melodic vocabulary, which, was subseqently picked up by jazz improvisers such as John Coltrane to inspire melodic invention. Slonimsky undertook this task manually via a system of dividing the octave into parts and interpolating intervening notes, among other various algorithmic procedures.
+
+This process of enumeration leads to a more general issue around combinatorics and musical, melodic, material. This problem of enumeration is much easier to solve computationally, up to a point, where computational tractability diminishes.
+
+In general, the number of melodic possibilities, given a 
+
+Let:
+
+- \( n \): number of intervals (length of the n-gram)
+- \( I = \{1, 2, \ldots, h\} \): the set of possible intervals, where \( h \) is the highest interval (e.g., 12, for an octave)
+
+Then the set of all melodic n-grams is:
+
+\[
+\text{Combos} = I^n = \{ (i_1, i_2, \ldots, i_n) \mid i_j \in I \text{ for } j = 1, \ldots, n \}
+\]
+
+
+and the number of combinations is:
+
+$$
+\text{Number of combinations} = |I^n| = h^n
+$$
+
+Where:
+
+- \( |I^n| \) is the number of elements in the Cartesian product \( I^n \)
+- \( h^n \) means you are choosing one of \( h \) intervals at each of the \( n \) positions
+
+
+```{r interval-combinations, include = FALSE}
+
+# Parameters
+h <- 12
+max_n <- 8
+
+# Create a data frame with combinations
+combos_df <- tibble::tibble(
+  N = 1:max_n,
+  Combinations = h ^ (1:max_n)
+)
+
+# Plot the table as a bar chart
+ggplot2::ggplot(combos_df, ggplot2::aes(x = factor(N), y = Combinations)) +
+  ggplot2::geom_bar(stat = "identity", fill = "steelblue") +
+  ggplot2::labs(
+    title = "Number of Interval Combinations by N",
+    x = "N (Number of Intervals)",
+    y = "Number of Combinations (h = 12)"
+  ) +
+  ggplot2::theme_minimal()
+
+
+```
+
+Already for even the relatively short melody length of nine notes (eight intervals), with a maximum interval semitone size of 12 (i.e., an octave), 429,981,696 melodies are possible and the computational feasibility of computing all such melodies is relatively limited on an ordinary modern day laptop.
+
+This suggests a few points: 1) Slonimsky's thesaurus of fewer than 1,500 was by no means exhaustive; 2) up until a point, such a task is much easier with a computer, with a few lines of code; 3) this "melodyverse" ensures that composers and improvisers will never cease to find new melodic sounds, which is great from a creative point of view.
+
+From a cognitive point of view, this may lead the musician learning to play by ear to be nervous: how can one select from the melodyverse, or indeed, a small, but still overwhelming version of it, like Slonimsky's Thesaurus. Other than the general approach explicated in this thesis, there are several reasons to reserve dauntedness. First, in practice, the combinations of twelve tones are usually constrained in various ways: the first level of constraint in Western music are usually to bound note choices within the seven-note major or minor scales, or subsets of these "tonal" scales, like the pentatonic scale. However, the use of chromaticism within Western harmony re-opens the melodic space again. Additionally, it may not be necessary to have encountered and practised a specific melodic combination in one's life study history to successfully play it by ear. It is more likely that some level of abstraction develops such that previous learning (the training set) can still generalise to a wider test set; notions important to (artifical) intelligence. Therefore, it is conceivable, that if one chose training data intelligently, one's playing by ear abilities could project to a much wider space, eventually. This is the goal of this thesis: to constantly find the parts of the melodic space that can open a learner's ear to possibilities they could not previously hear, be that at a very beginner, or the level of Coltrane. There must be a general solution to this problem.
+
 
 <!-- 
 ```{r include = FALSE}
@@ -25,16 +79,25 @@ The derivation of Slonimsky's *Thesaurus* - a new to document and rationalise lo
 ```
 -->
 
+
+
+
+
+
 ### Melodic Represention and Computational Melodic Features
 
-### Melody as Cognitive Psychology
 
-### Fuzzification
+#### Melodic Feature Analysis
 
+### Melody as Cognitive Psychology (?)
 
 [@herbornFeaturesPerceptionConstruction2022]
 
-### Computed Melodic Features as a musicological basis for selecting items
+
+
+
+### Computed Melodic Features as a Musicological Basis for Selecting Items
+
 
 
 
@@ -42,4 +105,65 @@ The derivation of Slonimsky's *Thesaurus* - a new to document and rationalise lo
 
 The book has at least 1,400 discrete items and some of the patterns are terrifically long and complicated. Additionally, nearly all of the melodies are presented from a single note, C, and could be transposed to start on the other 11 chromatic tones. This means there are at least 16,800 (12 * 1400) items to be learned. The author’s saxophone tutor, who was a virtuoso, once said, "Oh, don't bother trying to learn [Slonimsky’s Thesaurus of Scales and Melodic Patterns] systematically". This was a wise comment since, as there is so much information, it is almost impossible for a human to comprehend and track their learning of it systematically. However, with advances in computation, this is a relatively easy challenge to solve once the data is in digital form. The author entered the Slonimsky’s Thesaurus corpus into his computer to provide a digital representation. This corpus will remain the test case for description in this document later on.
 
+
+
+
+## Melodic Similarity
+
+### Set Theory
+
+### Fuzzification
+
+To address this issue, we introduce the notion of a melodic similarity metric for scoring melodic recall data. In the scientific area that has been termed *Music Information Retrieval* [@downieMusicInformationRetrieval2003], and that has seen a large boost in recent years, several approaches to *similarity* measurement for melodies and other musical objects have been developed [e.g., @mullensiefenCognitiveAdequacyMeasurement2004; @pearceMullensiiefen2017; @typkeTransportationDistancesHuman2007; @yuanPerceptualVsAutomated2020]. The similarity measures employed in this study are favoured because they proved their effectiveness and ecological validity (or rather comparability) with the notion of melodic similarity of musically experienced participants in separate studies [@mullensiefenCourtDecisionsMusic2009; @mullensiefenMelodicSimilarityApproaches2004; @mullensiefenModellingExpertsNotions2007]. Therefore, while there still might not be an undisputed theory of melodic identity, as Sloboda and Parker claimed in 1985, this study will use some algorithms that at least came quite close in emulating musically experienced participants' similarity judgements. However, whilst measures of similarity have been validated in the context of human perceptual judgements (e.g., to predict court case outcomes), we are not aware that they have been profiled in the context of sung recall, as we intend to do here.
+
+### Methodological Background
+
+Having obtained numerical representations of both sung recalls and the target melodies, the similarities between a target melody and sung recall of that melody, for each attempt of each participant, can be calculated using the algorithmic similarity measures described in @mullensiefenMelodicSimilarityApproaches2004. The similarity measures employed here comply with the two main points already raised by @slobodaImmediateRecallMelodies1985 in their discussion of their methodology of melodic comparison: in most cases - that is especially true for the earlier trials - participants only recall a smaller part of the original melody, which may not even start with the beginning of the original. Thus, a similarity measure (or algorithm) must be chosen that automatically looks for the best alignment of the (short) melodic sequence of the sung recall with the original melodic sequence. @slobodaImmediateRecallMelodies1985 manually attempted a form of alignment, making it a cumbersome task, but additionally, their method is not precisely described. To advance on this point, we detail a precise computational method.
+
+An algorithm for the optimal alignment of two symbol sequences that has been widely used in domains such as text retrieval or bio-computing, as well as music information retrieval, is the so-called Edit Distance or Levenshtein distance [e.g., @mongeauComparisonMusicalSequences1990]. The Edit Distance is the minimum number of operations it takes to transform one symbol string into another: the possible operations being insertion, deletion, and substitution. The actual calculation of the Edit Distance is carried out using dynamic programming and is not explained here. For a general reference regarding the algorithm see e.g., @gusfieldAlgorithmsStringsTrees1997. In this case, the maximal Edit Distance of two strings is equal to the length of the longer string. To convert the Edit Distance into a similarity measure with a range of values $[0,1]$ we use the following:
+
+\begin{equation}
+\sigma(s,t)=1-\frac{d_e (s,t)}{\max(|s|,|t|)}
+(\#eq:editdist)
+\end{equation}
+
+where $|s|$ and $|t|$ denote the element counts of strings $s$ and $t$ respectively, and $d_e(s,t)$ stands for the Edit Distance between strings $s$ and $t$. 
+
+
+Just like the manual scoring techniques employed by @slobodaImmediateRecallMelodies1985, the edit distance calculates the similarity between two symbolic sequences by taking the number of edits (i.e. additions, deletions or substitutions) that are necessary to transform one of the sequences into the other, and dividing this figure by the number of symbols in the longer sequence. It thus could be argued that Sloboda and Parker intuitively used a version of the edit distance, evaluating the similarity between the recalls of their participants on the original melody, keeping the order of notes in mind.
+
+However, importantly, instead of applying the edit distance to raw note values, here the edit distance is computed on various symbolic representations of musical dimensions (i.e., relative pitch sequences - intervals - as opposed to single pitches; rhythm sequences; and sequences of implied harmonies; @mullensiefenMelodicSimilarityApproaches2004). Specifically, we employ the *opti3* measure of melodic similarity [@mullensiefenMelodicSimilarityApproaches2004] as our main dependent variable. *opti3* is a hybrid measure derived from the weighted sum of three individual measures which represent different aspects of melodic similarity. The similarity in interval content is captured by the *ngrukkon* measure is based on the Ukkonen Measure that measures the difference of the occurrence frequencies of interval trigrams ($\tau$) contained within the target melody ($f_s (\tau)$) and the comparison melody ($f_s (\tau)$) (see @uitdenbogerdMusicInformationRetrieval2002 Formally:
+
+
+\begin{equation}
+u(s,t)=\sum_{\tau \in s_n \cup t_n} |f_s (\tau)-f_t(\tau)|
+(\#eq:ngrukkon)
+\end{equation}
+
+As the Ukkonen Measure is a distance measure in its original definition, we normalise by the maximum possible number of $n$-grams and subtract the result from 1:
+
+\begin{equation}
+\sigma (s,t) = 1 - \frac{u(s,t)}{|s|+|t|-2(n-1)}
+(\#eq:ngrukkon2)
+\end{equation}
+
+Note that the Ukkonen measure is not based on the edit distance but still takes order of notes into account at a local level by comparing trigrams of pitch intervals.
+
+Harmonic similarity is measured by the *harmcore* measure. This measure is based on the chords implied by a melodic sequence, taking pitches and durations (i.e., segmentation) into account. Implied harmonies are computed using the Krumhansl-Schmuckler algorithm [@krumhanslCognitiveFoundationsMusical1990] and the harmonic progression of the two melodies are compared by computing the number of operations necessary to transform one harmonic progression into the other sequence via the edit distance. Finally, likewise, rhythmic similarity is computed by first categorizing the durations of the notes of both melodies (known as "fuzzification") and then applying the edit distance to measure the distance between the two sequences of categorised durations. The resulting measure of rhythmic similarity is called *rhythfuzz* [@mullensiefenMelodicSimilarityApproaches2004]. Note that *rhythfuzz* does not take metric information into account and works solely based on (relative) note durations. Similarly, *ngrukkon* works with interval information and is hence invariant to transposition. 
+
+Based on the perceptual data collected by @mullensiefenMelodicSimilarityApproaches2004, the three individual measures are weighted and combined to form a single aggregate measure of melodic similarity, *opti3*. Hence, *opti3* is sensitive to similarities and differences in three important aspects of melodic perception (pitch intervals, harmony, rhythm). We note that all three individual measures (*ngrukkon*, *harmcore*, *rhythfuzz*) can take values between 0 (= no similarity) and 1 (= identity) and are length-normalized by considering the number of elements of the longer melody. *opti3* then comprises [@mullensiefenMelodicSimilarityApproaches2004]:
+
+\begin{equation}
+{opti3}= 0.505 \cdot \mathtt{ngrukkon} + 0.417 \cdot \mathtt{rhythfuzz} + 0.24 \cdot \mathtt{harmcore} -0.146
+(\#eq:opti3)
+\end{equation}
+
+where we here present the normalised weights, which constrain the values to be [0,1]. 
+
+Beyond the target or comparison melody lengths being used to normalise the *opti3* score, we note that *opti3* is dependent on the length of the two comparison melodies further in only a soft sense, which is particularly relevant to Experiment 2 of this paper, where we use the sung recall attempt length as an auxiliary dependent variable. If one melody is shorter than the other, at least some of the melodic identity is destroyed: necessarily, the rhythmic (*rhythfuzz*) and intervallic (*ngrukkon*) components, but not necessarily the harmonic (*harmcore*) component. It should be clear that *opti3* captures far more (musical) information than melody length(s) alone and/or accuracy-style measures. The ecological validity of the aggregate similarity measure has been established in several perceptual experiments [@mullensiefenCourtDecisionsMusic2009; @yuanPerceptualVsAutomated2020]. See Appendix B for concise descriptions comparing the similarity measures. Moreover, to build an intuition on how similarity measures change in relation to attempt, see Appendix C for notated examples of development in sung recall performance and a qualitative description of their change in similarity.
+
+In summary, similarity measures pay attention to musical features that arise from the relationships between pitch and rhythmic values and could be considered more "global" in nature. Conversely, accuracy measures which count notes or even intervals (bigrams), do not respect the higher order emergent properties of musical features. Consequently, aggregate similarity measures have a greater ability to represent perceptual properties relevant in human cognition and represent a robust step towards computationally representing a notion of melodic identity. In this way, similarity algorithms have been used to predict subjective similarity judgements, for example, in musical plagiarism court cases, with excellent success [@yuanPerceptualVsAutomated2020; @mullensiefenCourtDecisionsMusic2009]. As an aid in developing an intuitive understanding of the different properties arising from scoring melodic recall data on accuracy-style vs. similarity measures, see Appendix A2 for simple example comparisons.
+
+
+The usage of melodic similarity metrics to score sung recall data has been previously documented by the present author [@silasLearningRecallingMelodies2023; @silasSingingAbilityAssessment2023].
 

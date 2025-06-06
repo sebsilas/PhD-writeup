@@ -4,7 +4,7 @@
 
 <!-- https://chatgpt.com/c/683ad51a-434c-800d-afa4-1b11dac1635f -->
 
-Somewhat narratively separate from the specific jazz pedagogical issues discussed in the previous section, but which is nonetheless relevant to any learner in the 21st - including those enlisting in jazz studies - is a discussion of the development of computerised ear training technology, which be discussed below.
+Somewhat narratively separate from the specific jazz pedagogical issues discussed in the previous section, but which is nonetheless relevant to any learner in the 21st centry - including those enlisting in jazz studies - is a discussion of the development of computerised ear training technology, which be discussed below.
 
 ### Historical Development of Ear-Training Technology
 
@@ -51,6 +51,6 @@ However, technology cannot fully replicate a skilled teacher or ensemble experie
 
 ### Modern Technological Approaches to Ear Training: Conclusion
 
-Modern technology has substantially broadened the toolkit for jazz ear training. From historically modest *CAI* programs to today’s interactive apps, VR experiences, and AI transcribers, musicians and educators have more resources than ever for developing listening skills. These tools generally align with traditional jazz pedagogy by reinforcing learning-by-ear, but they allow more self-guided, data-driven practice than the old master-apprentice model. Academic research (from empirical studies to qualitative surveys) suggests that, when used thoughtfully, technology can improve outcomes in pitch, rhythm, and harmonic recognition [@ekm23; @lingjieEffectivenessStudyApplying2025].
+Modern technology has substantially broadened the toolkit for jazz ear training. From historically modest computer-assisted programs to today’s interactive apps, VR experiences, and AI transcribers, musicians and educators have more resources than ever for developing listening skills. These tools generally align with traditional jazz pedagogy by reinforcing learning-by-ear, but they allow more self-guided, data-driven practice than the old master-apprentice model. Academic research (from empirical studies to qualitative surveys) suggests that, when used thoughtfully, technology can improve outcomes in pitch, rhythm, and harmonic recognition [@ekm23; @lingjieEffectivenessStudyApplying2025].
 
 At the same time, they remind us of the irreplaceable value of human nuance – the swinging rhythm of a live drummer, the phrasing of a soloist, and the inspirational guidance of a mentor. The most effective ear-training approach in jazz likely combines the best of both worlds: students drill fundamentals and tricky passages with software, then validate and refine their skills in real musical contexts (singer circles, jam sessions, or ensemble rehearsals). As technology continues to evolve – with VR, AI, and improved music analysis – jazz education will doubtless adapt, aiming always to train both the intuitive "good ear" and the knowledgeable, expressive improviser.

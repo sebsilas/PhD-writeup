@@ -2,20 +2,25 @@
 # Backgrounds {#backgrounds}
 
 
+
 ```{r child="_includes/_02_01-historical_background.Rmd"}
 
 
 ```
+
 
 ```{r child="_includes/_02_02-modern_technological_approaches.Rmd"}
 
 
 ```
 
+Having motivated this work in terms of historical context up to contemporary technological approaches to improving playing by ear skills, I will now turn to motivating it in terms of the more specific epistemological approaches taken to assess this question in this dissertation. These approaches are: systematic musicological, cognitive psychological, and computational. In general, these approaches come from the *scientific approach*, whereas the content reviewed in the last chapter was largely not based on such an approach.
+
 ```{r child="_includes/_02_03-playing_by_ear_literature_review.Rmd"}
 
 
 ```
+
 
 ```{r child="_includes/_02_04-musicological_background.Rmd"}
 
