@@ -5,19 +5,12 @@
 
 ## Cognitive Psychology  {#cognitive_psychological_background}
 
+
 To support the second main motivation of this project: to build an item selection mechanism for playing by ear items, it is necessary to review literature regarding learning and memory more generally, and where more extensive research has been undertaken into finding items for people to learn as well as review.
-
-
-### General Principles of Learning and Memory
-
 
 #### Theoretical Background
 
 Learning and memory are fundamental cognitive processes that allow us to acquire new knowledge and retain it over time. Psychologists have long sought to understand how we learn and why we forget. Early experimental work established basic patterns of memory retention and loss that remain influential today. For example, pioneering studies by Hermann Ebbinghaus in the 1880s laid the groundwork for formal memory research by charting how quickly information is forgotten [@Cepeda2008; @ebbinghausMemory1888]. Since then, cognitive psychology has built a rich literature on the principles underlying learning and forgetting. This review provides an overview of general principles of learning and memory from a cognitive perspective, with an emphasis on how these principles manifest in both short-term and long-term memory. We will discuss historical findings (such as Ebbinghaus’s forgetting curve and Jenkins & Dallenbach’s work on memory and sleep), examine the phenomena of learning and forgetting curves in different time scales, and explore the effectiveness of spaced repetition as a learning technique. We also highlight a recent computational model of memory – the DASH model (Difficulty, Ability, and Study History) by @mozerPredictingImprovingMemory2016 – and discuss how these cognitive principles are applied in modern language learning approaches and apps. Throughout, we ground the review in peer-reviewed findings to ensure academic rigor while keeping the explanations accessible to a general audience.
-
-##### Memory Systems and Retention 
-
-Cognitive psychology distinguishes between short-term memory and long-term memory in terms of both capacity and duration. Short-term memory (often equated with working memory) is a limited storage that holds information for mere seconds if not actively rehearsed [@cascellaShortTermMemoryImpairment2025]. In contrast, long-term memory can retain information for days, years, or even a lifetime. These two memory systems differ not only in duration but also in function and mechanism. Short-term memory acts as a mental “scratchpad” for immediate information processing (such as remembering a phone number long enough to dial it), whereas long-term memory stores more durable knowledge such as facts, personal experiences, and skills. The classic @atkinsonHumanMemoryProposed1968 conceptualised memory as a flow from transient sensory memory, to short-term memory, and eventually to long-term storage. While modern research has refined this modal model, the basic distinction remains useful: short-term memory is fleeting unless information is deliberately maintained or encoded into long-term memory.
 
 ##### Learning and Forgetting Curves
 

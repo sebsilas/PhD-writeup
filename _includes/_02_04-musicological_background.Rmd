@@ -80,25 +80,39 @@ From a cognitive point of view, this may lead the musician learning to play by e
 -->
 
 
+### Music Corpora Analysis
 
+
+[@mullensiefenStatisticalMethodsMusic]
 
 
 
 ### Melodic Represention and Computational Melodic Features
 
 
+A melody can be represented symbolically, in a way that makes computational analysis, in a number of ways. A simple convention, is to use *MIDI* notation [@rothsteinMIDIComprehensiveIntroduction1996], whereby pitches are represented as integers, with e.g., C4 being represented by 60, Db4 by 61 etc. For durations, millsecond or second values can be used. This is a basic low-level representation, which may be suitable for simple playback. However, this precludes many other possible higher-level musical representations, such as those to do with phrases, meter, not to mention articulation etc. 
+
+
+@conklinMultipleViewpointSystems1995 proposed the Multiple Viewpoint System (MVS) as a cognitively motivated framework for modelling musical expectation and structure. Acknowledging that human listeners attend to a range of simultaneous musical cues—such as pitch, rhythm, contour, and phrasing—the MVS represents each musical event through a set of distinct viewpoints, each capturing a different musically salient abstraction (e.g., melodic interval, position within the bar, or phrase boundaries).
+
+The system incorporates both long-term statistical knowledge (learned from a corpus of musical works) and short-term contextual information (specific to the piece in progress). This reflects the dual influence of stylistic familiarity and local pattern recognition in human musical cognition. Each viewpoint is modelled as an independent probabilistic context model, and their predictions are combined to estimate the probability of upcoming events. Predictive performance is evaluated using entropy, with lower entropy interpreted as greater predictability.
+
+The authors argue that low-entropy predictions align with cognitive plausibility, positioning entropy as a proxy for musical expectation. In empirical tests on Bach chorale melodies, the model achieved prediction accuracy close to that of human listeners. The multiple viewpoint system thus offers a compelling computational account of how listeners may internally represent and anticipate musical structure by integrating multiple concurrent sources of musical information.
+
+
+In general, See @frielerComputationalMelodyAnalysis2018 for a thorough description of monophonic melodic representation in music.
+
+
 #### Melodic Feature Analysis
 
-### Melody as Cognitive Psychology (?)
 
-[@herbornFeaturesPerceptionConstruction2022]
-
+Conversely, for melodic items with multiple notes, musical features emerge (e.g., tonality, contour, rhythm). Such emergent features clearly rely on high-level mental representations and templates (i.e., musical knowledge). Consequently, there can be significant variance in complexity when a melody is the item of testing, and these kind of item difficulties are important to model. Important melodic representations can be quantified for each melodic item across important dimensions [@mullensiefenFANTASTICFeatureANalysis2009]. As suggested by previous literature [@bakerModelingMelodicDictation2019; @dreyfusRecognitionLeitmotivesRichard2016; @harrisonModellingMelodicDiscrimination2016], there are several melodic features which could indicate an item's complexity and predict singing performance (e.g., tonality, interval contour, a melody's frequency in occurrence).
 
 
 
 ### Computed Melodic Features as a Musicological Basis for Selecting Items
 
-
+Highlighting the intrinsic link between melodic features and human cognition, @herbornFeaturesPerceptionConstruction2022 suggested the notion of "composed melodies *as* applied music psychology".
 
 
 ### Pattern Books as Item Banks
@@ -106,15 +120,18 @@ From a cognitive point of view, this may lead the musician learning to play by e
 The book has at least 1,400 discrete items and some of the patterns are terrifically long and complicated. Additionally, nearly all of the melodies are presented from a single note, C, and could be transposed to start on the other 11 chromatic tones. This means there are at least 16,800 (12 * 1400) items to be learned. The author’s saxophone tutor, who was a virtuoso, once said, "Oh, don't bother trying to learn [Slonimsky’s Thesaurus of Scales and Melodic Patterns] systematically". This was a wise comment since, as there is so much information, it is almost impossible for a human to comprehend and track their learning of it systematically. However, with advances in computation, this is a relatively easy challenge to solve once the data is in digital form. The author entered the Slonimsky’s Thesaurus corpus into his computer to provide a digital representation. This corpus will remain the test case for description in this document later on.
 
 
-
-
 ## Melodic Similarity
 
+In the scientific area that has been termed *Music Information Retrieval* [@downieMusicInformationRetrieval2003], and that has seen a large boost in recent years, several approaches to *similarity* measurement for melodies and other musical objects have been developed [e.g., @mullensiefenCognitiveAdequacyMeasurement2004; @pearceMullensiiefen2017; @typkeTransportationDistancesHuman2007; @yuanPerceptualVsAutomated2020]. The similarity measures employed in the present dissertation are favoured because they proved their effectiveness and ecological validity (or rather comparability) with the notion of melodic similarity of musically experienced participants in separate studies [@mullensiefenCourtDecisionsMusic2009; @mullensiefenMelodicSimilarityApproaches2004; @mullensiefenModellingExpertsNotions2007].
+
+Therefore, while there still might not be an undisputed theory of melodic identity, as Sloboda and Parker claimed in 1985, this study will use some algorithms that at least came quite close in emulating musically experienced participants' similarity judgements. However, whilst measures of similarity have been validated in the context of human perceptual judgements (e.g., to predict court case outcomes), we are not aware that they have been profiled in the context of sung recall, as we intend to do here.
+
+<!--
 ### Set Theory
 
 ### Fuzzification
 
-To address this issue, we introduce the notion of a melodic similarity metric for scoring melodic recall data. In the scientific area that has been termed *Music Information Retrieval* [@downieMusicInformationRetrieval2003], and that has seen a large boost in recent years, several approaches to *similarity* measurement for melodies and other musical objects have been developed [e.g., @mullensiefenCognitiveAdequacyMeasurement2004; @pearceMullensiiefen2017; @typkeTransportationDistancesHuman2007; @yuanPerceptualVsAutomated2020]. The similarity measures employed in this study are favoured because they proved their effectiveness and ecological validity (or rather comparability) with the notion of melodic similarity of musically experienced participants in separate studies [@mullensiefenCourtDecisionsMusic2009; @mullensiefenMelodicSimilarityApproaches2004; @mullensiefenModellingExpertsNotions2007]. Therefore, while there still might not be an undisputed theory of melodic identity, as Sloboda and Parker claimed in 1985, this study will use some algorithms that at least came quite close in emulating musically experienced participants' similarity judgements. However, whilst measures of similarity have been validated in the context of human perceptual judgements (e.g., to predict court case outcomes), we are not aware that they have been profiled in the context of sung recall, as we intend to do here.
+-->
 
 ### Methodological Background
 
@@ -166,4 +183,8 @@ In summary, similarity measures pay attention to musical features that arise fro
 
 
 The usage of melodic similarity metrics to score sung recall data has been previously documented by the present author [@silasLearningRecallingMelodies2023; @silasSingingAbilityAssessment2023].
+
+
+
+#### Selecting Melodic Material as an Optimisation Problem
 
