@@ -1,6 +1,6 @@
 
 
-<!-- https://chatgpt.com/c/682853aa-40d8-800d-b546-b62db1411f93 -->
+Having motivated this work in terms of historical context up to contemporary technological approaches to improving playing by ear skills, I will now turn to motivating it in terms of the more specific epistemological approaches taken to assess this question in this dissertation. These approaches are: systematic musicological, cognitive psychological, and computational. In general, these approaches come from the *scientific approach*, whereas the content reviewed in the last chapter was largely not based on such an approach.
 
 
 ## Cognitive Psychology  {#cognitive_psychological_background}

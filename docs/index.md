@@ -2,7 +2,7 @@
 ---
 title: "Playing By Ear: A Computational Approach"
 author: "Seb Silas"
-date: "2025-06-06"
+date: "2025-06-08"
 site: bookdown::bookdown_site
 output:
   bookdown::gitbook: default

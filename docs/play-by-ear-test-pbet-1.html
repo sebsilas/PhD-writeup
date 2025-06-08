@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5 Playing By Ear: A Theoretical Model | Playing By Ear: A Computational Approach</title>
-  <meta name="description" content="5 Playing By Ear: A Theoretical Model | Playing By Ear: A Computational Approach" />
+  <title>10 Play By Ear Test (PBET) | Playing By Ear: A Computational Approach</title>
+  <meta name="description" content="10 Play By Ear Test (PBET) | Playing By Ear: A Computational Approach" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5 Playing By Ear: A Theoretical Model | Playing By Ear: A Computational Approach" />
+  <meta property="og:title" content="10 Play By Ear Test (PBET) | Playing By Ear: A Computational Approach" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5 Playing By Ear: A Theoretical Model | Playing By Ear: A Computational Approach" />
+  <meta name="twitter:title" content="10 Play By Ear Test (PBET) | Playing By Ear: A Computational Approach" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="a-comprehensive-theorectical-model-of-playing-by-ear.html"/>
-<link rel="next" href="computational-ecosystem.html"/>
+<link rel="prev" href="setup.html"/>
+<link rel="next" href="melsim_development.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -382,93 +382,181 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="theoretical-model" class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">5</span> Playing By Ear: A Theoretical Model<a href="theoretical-model.html#theoretical-model" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>As far as the author is aware, no computational model of playing by ear has been described in the music psychology, or related, literature(s). Thus, a first step in this thesis is to propose a theoretical model, which can then later be formulated more precisely as a computational model, then tested, partly with data collected throughout this thesis.</p>
-<p>However, related computational models have been described, for instance in the domain of aural skill acquisition <span class="citation">(Baker 2019)</span> and sung melodic recall by the author <span class="citation">(Silas and Müllensiefen 2023; Silas, Müllensiefen, and Kopiez 2023)</span>. Theoretical cognitive models have also been described in the domain of singing accuracy <span class="citation">(Pfordresher et al. 2015)</span>. Therefore, in this section, I will attempt to synthesise this literature to propose a corresponding model specifically for playing by ear skills. I distinguish between two basic playing by ear processes: a) playing by ear skill acquisition (learning) and b) playing by ear skill execution (recall).</p>
-<div id="bringing-it-together" class="section level2 hasAnchor" number="5.1">
-<h2><span class="header-section-number">5.1</span> Bringing It Together<a href="theoretical-model.html#bringing-it-together" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In sum, then,</p>
+<div id="play-by-ear-test-pbet-1" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">10</span> Play By Ear Test (PBET)<a href="play-by-ear-test-pbet-1.html#play-by-ear-test-pbet-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The <code>PBET</code> is a test of playing by ear ability which can be launched in R/Shiny via the <a href="https://github.com/pmcharrison/psychTestR"><code>psychTestR</code></a> package.</p>
+<div id="author" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Author<a href="play-by-ear-test-pbet-1.html#author" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Seb Silas, <a href="mailto:sebsilas@gmail.com">sebsilas@gmail.com</a></p>
 </div>
-<div id="moving-from-theoretical-to-computational" class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> Moving from Theoretical to Computational<a href="theoretical-model.html#moving-from-theoretical-to-computational" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>“When we develop a psychological theory that is sufficiently precise to be implemented as a computer program, we call it a computational model. The process of developing such theories, and implementing their corresponding computer programs, is then called computational modelling.” <span class="citation">(Harrison 2025)</span>.</p>
-<p>At this point, I already suggest a more specific feature to the model: that for playing by ear tasks, there exists a mental melodic “similarity” algorithm, housed in working memory. The input to this module is the target melody and the evolving real-time assessment of the melody being produced in the moment. The performer must hear the target melody, store this in short term memory as a reference, and then continuously update the target melody which each new note that is produced. I speculate that the mind recomputes the similarity between the presently number of recalled notes and the target melody iteratively, each time a new note is added. In other words, a check for the accuracy is made every time a note is recalled, and the presence of an error and its nature, will inform whether or not the performer stops to start again or continues to proceed recalling the melody, at least in the stage of learning. Formally:</p>
-<div id="inputs" class="section level3 hasAnchor" number="5.2.1">
-<h3><span class="header-section-number">5.2.1</span> Inputs<a href="theoretical-model.html#inputs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><span class="math inline">\(T = [t_1, t_2, \dots, t_n]\)</span>: TargetMelody of fixed length <span class="math inline">\(n\)</span>.</li>
-<li><span class="math inline">\(R = [r_1, r_2, \dots, r_k]\)</span>: RecalledMelody of length <span class="math inline">\(k\)</span>, unknown a priori.</li>
-</ul>
+<div id="demos" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> Demos<a href="play-by-ear-test-pbet-1.html#demos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Short <code>PBET</code> with feedback: <a href="https://musicassessr.com/PBET-demo" class="uri">https://musicassessr.com/PBET-demo</a></p>
+<!-- Prototype adaptive-`PBET`(*aPBET*) with feedback: https://adaptiveeartraining.com/aPBET -->
 </div>
-<div id="sequential-construction" class="section level3 hasAnchor" number="5.2.2">
-<h3><span class="header-section-number">5.2.2</span> Sequential Construction<a href="theoretical-model.html#sequential-construction" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><span class="math inline">\(T\)</span> is fixed and built one note at a time.</li>
-<li><span class="math inline">\(R\)</span> is sequentially constructed one note at a time.</li>
-</ul>
-</div>
-<div id="function-application" class="section level3 hasAnchor" number="5.2.3">
-<h3><span class="header-section-number">5.2.3</span> Function Application<a href="theoretical-model.html#function-application" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>At each step <span class="math inline">\(i\)</span> (current length of <span class="math inline">\(R\)</span>), the function <strong>MelSim</strong> is applied to <strong>TargetMelody</strong> and the current length of <strong>RecalledMelody</strong>.</li>
-</ul>
-</div>
-</div>
-<div id="mathematical-representation" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> Mathematical Representation<a href="theoretical-model.html#mathematical-representation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Let:
-- <span class="math inline">\(T_i\)</span> be the prefix of the TargetMelody up to length <span class="math inline">\(i\)</span>, i.e., <span class="math inline">\(T_i = [t_1, t_2, \dots, t_i]\)</span>.
-- <span class="math inline">\(R_i\)</span> be the current state of the RecalledMelody of length <span class="math inline">\(i\)</span>, i.e., <span class="math inline">\(R_i = [r_1, r_2, \dots, r_i]\)</span>.
-- <span class="math inline">\(\text{MelSim}(T_i, R_i)\)</span> be the similarity function between the two melodies at length <span class="math inline">\(i\)</span>.</p>
-<p>The MelSim function can be formulated as:</p>
-<p><span class="math display">\[
-\text{MelSim}(T_i, R_i) = f(T_i, R_i)
-\]</span></p>
-<p>Where:
-- <span class="math inline">\(f\)</span> is a similarity measure (e.g., distance function, alignment score).
-- <span class="math inline">\(i\)</span> iterates from 1 to <span class="math inline">\(n\)</span>, where <span class="math inline">\(n\)</span> is the fixed length of the target melody.</p>
-</div>
-<div id="algorithm-flow" class="section level2 hasAnchor" number="5.4">
-<h2><span class="header-section-number">5.4</span> Algorithm Flow<a href="theoretical-model.html#algorithm-flow" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="installation-1" class="section level2 hasAnchor" number="10.3">
+<h2><span class="header-section-number">10.3</span> Installation<a href="play-by-ear-test-pbet-1.html#installation-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
-<li>Start with an empty recalled melody <span class="math inline">\(R\)</span>.</li>
-<li>For each new note <span class="math inline">\(r_i\)</span> added to <span class="math inline">\(R\)</span>:
-<ul>
-<li>Compute the similarity: <span class="math inline">\(\text{MelSim}(T_i, R_i)\)</span> if <span class="math inline">\(i = n\)</span>.</li>
-</ul></li>
-<li>Repeat until the entire recalled melody is constructed.</li>
+<li><p>Install <em>nodeJS</em>: <a href="https://nodejs.org/en/download/" class="uri">https://nodejs.org/en/download/</a></p></li>
+<li><p>Install <em>R</em>: <a href="https://cloud.r-project.org/" class="uri">https://cloud.r-project.org/</a></p></li>
+<li><p>Install <em>RStudio</em>: <a href="https://posit.co/downloads/" class="uri">https://posit.co/downloads/</a></p></li>
+<li><p>Launch <em>RStudio</em></p></li>
+<li><p>Install the <code>devtools</code> <em>R</em> package by pasting the following command into the <em>RStudio</em> terminal:</p></li>
 </ol>
+<p><code>install.packages('devtools')</code></p>
+<ol start="6" style="list-style-type: decimal">
+<li>Install the <code>PBET</code> package:</li>
+</ol>
+<p><code>devtools::install_github('sebsilas/PBET')</code></p>
 </div>
-<div id="final-equation" class="section level2 hasAnchor" number="5.5">
-<h2><span class="header-section-number">5.5</span> Final Equation<a href="theoretical-model.html#final-equation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The similarity calculation is performed only when the length of the <strong>RecalledMelody</strong> equals the fixed length of the <strong>TargetMelody</strong>. Therefore, the final equation is expressed as:</p>
-<p><span class="math display">\[
-\text{MelSim}(T, R_n) = f(T, R_n)
-\]</span></p>
-<p>I note that the <code>MelSim</code> algorithm is itself modular and of discussion in and of itself (cite M&amp;F). For the purpose of this paper,</p>
+<div id="usage-1" class="section level2 hasAnchor" number="10.4">
+<h2><span class="header-section-number">10.4</span> Usage<a href="play-by-ear-test-pbet-1.html#usage-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Once you have completed the above steps, you can run the <code>PBET</code> test by doing the following:</p>
+<ol style="list-style-type: decimal">
+<li><p>Create a folder which will contain your app. The name of this folder will become the <code>app_name</code> argument when you run the <code>PBET</code> or <code>PBET_standalone</code> functions later.</p></li>
+<li><p>In the folder, create an <em>R</em> file called <code>app.R</code>. In this file, paste your code to run the <code>PBET</code> there, like below:</p></li>
+</ol>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="play-by-ear-test-pbet-1.html#cb23-1" tabindex="-1"></a></span>
+<span id="cb23-2"><a href="play-by-ear-test-pbet-1.html#cb23-2" tabindex="-1"></a><span class="co"># Load the PBET package</span></span>
+<span id="cb23-3"><a href="play-by-ear-test-pbet-1.html#cb23-3" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="play-by-ear-test-pbet-1.html#cb23-4" tabindex="-1"></a><span class="fu">library</span>(PBET)</span>
+<span id="cb23-5"><a href="play-by-ear-test-pbet-1.html#cb23-5" tabindex="-1"></a></span>
+<span id="cb23-6"><a href="play-by-ear-test-pbet-1.html#cb23-6" tabindex="-1"></a><span class="co"># Run a short test with feedback:</span></span>
+<span id="cb23-7"><a href="play-by-ear-test-pbet-1.html#cb23-7" tabindex="-1"></a></span>
+<span id="cb23-8"><a href="play-by-ear-test-pbet-1.html#cb23-8" tabindex="-1"></a><span class="fu">PBET_standalone</span>(<span class="at">app_name =</span> <span class="st">&#39;my_PBET_app&#39;</span>,</span>
+<span id="cb23-9"><a href="play-by-ear-test-pbet-1.html#cb23-9" tabindex="-1"></a>               <span class="at">skip_setup =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb23-10"><a href="play-by-ear-test-pbet-1.html#cb23-10" tabindex="-1"></a>               <span class="at">absolute_url =</span> <span class="st">&quot;https://adaptiveeartraining.com&quot;</span>,</span>
+<span id="cb23-11"><a href="play-by-ear-test-pbet-1.html#cb23-11" tabindex="-1"></a>               <span class="at">num_items =</span> <span class="fu">list</span>(<span class="st">&quot;interval_perception&quot;</span> <span class="ot">=</span> <span class="dv">0</span><span class="dt">L</span>,</span>
+<span id="cb23-12"><a href="play-by-ear-test-pbet-1.html#cb23-12" tabindex="-1"></a>                                 <span class="st">&quot;find_this_note&quot;</span> <span class="ot">=</span> <span class="dv">0</span><span class="dt">L</span>,</span>
+<span id="cb23-13"><a href="play-by-ear-test-pbet-1.html#cb23-13" tabindex="-1"></a>                                 <span class="st">&quot;arrhythmic&quot;</span> <span class="ot">=</span> <span class="fu">list</span>(<span class="st">&quot;key_easy&quot;</span> <span class="ot">=</span> <span class="dv">1</span><span class="dt">L</span>,</span>
+<span id="cb23-14"><a href="play-by-ear-test-pbet-1.html#cb23-14" tabindex="-1"></a>                                                     <span class="st">&quot;key_hard&quot;</span> <span class="ot">=</span> <span class="dv">1</span><span class="dt">L</span>),</span>
+<span id="cb23-15"><a href="play-by-ear-test-pbet-1.html#cb23-15" tabindex="-1"></a>                                 <span class="st">&quot;rhythmic&quot;</span> <span class="ot">=</span> <span class="fu">list</span>(<span class="st">&quot;key_easy&quot;</span> <span class="ot">=</span> <span class="dv">1</span><span class="dt">L</span>,</span>
+<span id="cb23-16"><a href="play-by-ear-test-pbet-1.html#cb23-16" tabindex="-1"></a>                                                   <span class="st">&quot;key_hard&quot;</span> <span class="ot">=</span> <span class="dv">1</span><span class="dt">L</span>),</span>
+<span id="cb23-17"><a href="play-by-ear-test-pbet-1.html#cb23-17" tabindex="-1"></a>                                 <span class="st">&quot;wjd_audio&quot;</span> <span class="ot">=</span> <span class="fu">list</span>(<span class="st">&quot;key_easy&quot;</span> <span class="ot">=</span> <span class="dv">0</span><span class="dt">L</span>,</span>
+<span id="cb23-18"><a href="play-by-ear-test-pbet-1.html#cb23-18" tabindex="-1"></a>                                                    <span class="st">&quot;key_hard&quot;</span> <span class="ot">=</span> <span class="dv">0</span><span class="dt">L</span>)),</span>
+<span id="cb23-19"><a href="play-by-ear-test-pbet-1.html#cb23-19" tabindex="-1"></a>               <span class="at">examples =</span> <span class="fu">list</span>(</span>
+<span id="cb23-20"><a href="play-by-ear-test-pbet-1.html#cb23-20" tabindex="-1"></a>                 <span class="st">&quot;find_this_note&quot;</span> <span class="ot">=</span> <span class="dv">0</span><span class="dt">L</span>,</span>
+<span id="cb23-21"><a href="play-by-ear-test-pbet-1.html#cb23-21" tabindex="-1"></a>                 <span class="st">&quot;interval_perception&quot;</span> <span class="ot">=</span> <span class="dv">0</span><span class="dt">L</span>,</span>
+<span id="cb23-22"><a href="play-by-ear-test-pbet-1.html#cb23-22" tabindex="-1"></a>                 <span class="st">&quot;arrhythmic&quot;</span> <span class="ot">=</span> <span class="fu">list</span>(<span class="st">&quot;easy&quot;</span> <span class="ot">=</span> <span class="dv">0</span><span class="dt">L</span>, <span class="st">&quot;hard&quot;</span> <span class="ot">=</span> <span class="dv">0</span><span class="dt">L</span>),</span>
+<span id="cb23-23"><a href="play-by-ear-test-pbet-1.html#cb23-23" tabindex="-1"></a>                 <span class="st">&quot;rhythmic&quot;</span> <span class="ot">=</span> <span class="fu">list</span>(<span class="st">&quot;easy&quot;</span> <span class="ot">=</span> <span class="dv">0</span><span class="dt">L</span>, <span class="st">&quot;hard&quot;</span> <span class="ot">=</span> <span class="dv">0</span><span class="dt">L</span>), <span class="co"># because it&#39;s effectively the same task as arrhythmic</span></span>
+<span id="cb23-24"><a href="play-by-ear-test-pbet-1.html#cb23-24" tabindex="-1"></a>                 <span class="st">&quot;wjd_audio&quot;</span> <span class="ot">=</span> <span class="fu">list</span>(<span class="st">&quot;easy&quot;</span> <span class="ot">=</span> <span class="dv">0</span><span class="dt">L</span>, <span class="st">&quot;hard&quot;</span> <span class="ot">=</span> <span class="dv">0</span><span class="dt">L</span>)</span>
+<span id="cb23-25"><a href="play-by-ear-test-pbet-1.html#cb23-25" tabindex="-1"></a>               ),</span>
+<span id="cb23-26"><a href="play-by-ear-test-pbet-1.html#cb23-26" tabindex="-1"></a>               <span class="at">feedback =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<p>Remember that the <code>app_name</code> argument should match the name of your folder.</p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Make sure that your current directory is the app folder you created. You can check the current directory by using <code>getwd()</code>. You may need to set the app directory by placing <code>setwd('/Users/musicassessr/my_project/my_PBET_app')</code> at the beginning of your app file.</p></li>
+<li><p>Run the app. To do this in <em>RStudio</em>, use the shortcut <code>Command + Shift + Enter</code> on Mac (<code>Ctrl + Shift + Enter</code> on Windows).</p></li>
+<li><p>If the above steps were successful, the <code>PBET</code> test should load in your web browser, and as you progress through the test, you should receive feedback after each trial. Recorded audio should appear in the <em>/app_name/www/audio/</em> directory.</p></li>
+</ol>
+<p>If not, go to our <a href="">Troubleshooting</a> page or <a href="https://github.com/sebsilas/PBET/issues">raise an issue on Github</a>.</p>
 </div>
-<div id="strategies" class="section level2 hasAnchor" number="5.6">
-<h2><span class="header-section-number">5.6</span> Strategies<a href="theoretical-model.html#strategies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="usage-notes" class="section level2 hasAnchor" number="10.5">
+<h2><span class="header-section-number">10.5</span> Usage notes<a href="play-by-ear-test-pbet-1.html#usage-notes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li>Beyond scope of this dissertation to investigate in detail.</li>
-<li>Pop strategies hypotheses: <span class="citation">(Liscio and Brown 2024)</span></li>
-<li>Also, we have our own text data, for later.</li>
+<li><p>This has not yet been tested on Windows. We will be doing this very soon.</p></li>
+<li><p>The test requires internet connectivity.</p></li>
+<li><p>The <em>PBET</em> runs in your web browser. It is only recommended to run the test in <a href="https://www.google.com/chrome/">Google Chrome</a> or <a href="https://www.opera.com/download">Opera</a>. You will need to set one of these to be your default browser for <em>RStudio</em> to launch the test there (restart <em>RStudio</em> after doing this).</p></li>
 </ul>
 </div>
-<div id="the-melodic-mind-as-item-bank" class="section level2 hasAnchor" number="5.7">
-<h2><span class="header-section-number">5.7</span> The Melodic Mind as Item Bank<a href="theoretical-model.html#the-melodic-mind-as-item-bank" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>similar to <span class="citation">Haston and McPherson (2022)</span>’s concept of an “aural database”</p>
+<div id="citation" class="section level2 hasAnchor" number="10.6">
+<h2><span class="header-section-number">10.6</span> Citation<a href="play-by-ear-test-pbet-1.html#citation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We advise mentioning the software versions you used,
+in particular the versions of the <code>PBET</code>, <code>musicassessr</code>, <code>psychTestR</code>, and <code>psychTestRCAT</code> packages.
+You can find these version numbers from R by running the following commands:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="play-by-ear-test-pbet-1.html#cb24-1" tabindex="-1"></a><span class="fu">library</span>(PBET)</span>
+<span id="cb24-2"><a href="play-by-ear-test-pbet-1.html#cb24-2" tabindex="-1"></a><span class="fu">library</span>(psychTestR)</span>
+<span id="cb24-3"><a href="play-by-ear-test-pbet-1.html#cb24-3" tabindex="-1"></a><span class="fu">library</span>(psychTestRCAT)</span>
+<span id="cb24-4"><a href="play-by-ear-test-pbet-1.html#cb24-4" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(devtools)) <span class="fu">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)</span>
+<span id="cb24-5"><a href="play-by-ear-test-pbet-1.html#cb24-5" tabindex="-1"></a>x <span class="ot">&lt;-</span> devtools<span class="sc">::</span><span class="fu">session_info</span>()</span>
+<span id="cb24-6"><a href="play-by-ear-test-pbet-1.html#cb24-6" tabindex="-1"></a>x<span class="sc">$</span>packages[x<span class="sc">$</span>packages<span class="sc">$</span>package <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;PBET&quot;</span>, <span class="st">&quot;psychTestR&quot;</span>, <span class="st">&quot;psychTestRCAT&quot;</span>), ]</span></code></pre></div>
+</div>
+<div id="references-5" class="section level2 hasAnchor" number="10.7">
+<h2><span class="header-section-number">10.7</span> References<a href="play-by-ear-test-pbet-1.html#references-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Silas, S., Müllensiefen, D., &amp; Kopiez, R. (2023). Play By Ear Test: Development and validation of an open-source playing by ear test. In prep.</p>
+<div id="singing-ability-assessment-saa" class="section level3 hasAnchor" number="10.7.1">
+<h3><span class="header-section-number">10.7.1</span> Singing Ability Assessment (SAA)<a href="play-by-ear-test-pbet-1.html#singing-ability-assessment-saa" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The <em>Singing Ability Assessment</em> (<code>SAA</code>; Silas, Müllensiefen, &amp; Kopiez, 2023) is a test of singing ability which can be launched in R/Shiny via the <a href="https://github.com/pmcharrison/psychTestR"><code>psychTestR</code></a> package.</p>
+</div>
+</div>
+<div id="author-1" class="section level2 hasAnchor" number="10.8">
+<h2><span class="header-section-number">10.8</span> Author<a href="play-by-ear-test-pbet-1.html#author-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Seb Silas, <a href="mailto:sebsilas@gmail.com">sebsilas@gmail.com</a></p>
+</div>
+<div id="demos-1" class="section level2 hasAnchor" number="10.9">
+<h2><span class="header-section-number">10.9</span> Demos<a href="play-by-ear-test-pbet-1.html#demos-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Short <code>SAA</code> with feedback: <a href="https://adaptiveeartraining.com/SAA-demo" class="uri">https://adaptiveeartraining.com/SAA-demo</a></p>
+<p>Prototype adaptive-<code>SAA</code>(<em>aSAA</em>) with feedback: <a href="https://adaptiveeartraining.com/aSAA" class="uri">https://adaptiveeartraining.com/aSAA</a></p>
+</div>
+<div id="installation-2" class="section level2 hasAnchor" number="10.10">
+<h2><span class="header-section-number">10.10</span> Installation<a href="play-by-ear-test-pbet-1.html#installation-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p>Install <em>nodeJS</em>: <a href="https://nodejs.org/en/download/" class="uri">https://nodejs.org/en/download/</a></p></li>
+<li><p>Install <em>R</em>: <a href="https://cloud.r-project.org/" class="uri">https://cloud.r-project.org/</a></p></li>
+<li><p>Install <em>RStudio</em>: <a href="https://posit.co/downloads/" class="uri">https://posit.co/downloads/</a></p></li>
+<li><p>Launch <em>RStudio</em></p></li>
+<li><p>Install the <code>devtools</code> <em>R</em> package by pasting the following command into the <em>RStudio</em> terminal:</p></li>
+</ol>
+<p><code>install.packages('devtools')</code></p>
+<ol start="6" style="list-style-type: decimal">
+<li>Install the <code>SAA</code> package:</li>
+</ol>
+<p><code>devtools::install_github('sebsilas/SAA')</code></p>
+</div>
+<div id="usage-2" class="section level2 hasAnchor" number="10.11">
+<h2><span class="header-section-number">10.11</span> Usage<a href="play-by-ear-test-pbet-1.html#usage-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Once you have completed the above steps, you can run the <code>SAA</code> test by doing the following:</p>
+<ol style="list-style-type: decimal">
+<li><p>Create a folder which will contain your app. The name of this folder will become the <code>app_name</code> argument when you run the <code>SAA</code> or <code>SAA_standalone</code> functions later.</p></li>
+<li><p>In the folder, create an <em>R</em> file called <code>app.R</code>. In this file, paste your code to run the <code>SAA</code> there, like below:</p></li>
+</ol>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="play-by-ear-test-pbet-1.html#cb25-1" tabindex="-1"></a></span>
+<span id="cb25-2"><a href="play-by-ear-test-pbet-1.html#cb25-2" tabindex="-1"></a><span class="co"># Load the SAA package</span></span>
+<span id="cb25-3"><a href="play-by-ear-test-pbet-1.html#cb25-3" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="play-by-ear-test-pbet-1.html#cb25-4" tabindex="-1"></a><span class="fu">library</span>(SAA)</span>
+<span id="cb25-5"><a href="play-by-ear-test-pbet-1.html#cb25-5" tabindex="-1"></a></span>
+<span id="cb25-6"><a href="play-by-ear-test-pbet-1.html#cb25-6" tabindex="-1"></a><span class="co"># Run a short test with feedback:</span></span>
+<span id="cb25-7"><a href="play-by-ear-test-pbet-1.html#cb25-7" tabindex="-1"></a></span>
+<span id="cb25-8"><a href="play-by-ear-test-pbet-1.html#cb25-8" tabindex="-1"></a><span class="fu">SAA_standalone</span>(<span class="at">app_name =</span> <span class="st">&quot;my_SAA_app&quot;</span>,</span>
+<span id="cb25-9"><a href="play-by-ear-test-pbet-1.html#cb25-9" tabindex="-1"></a>               <span class="at">num_items =</span> <span class="fu">list</span>(<span class="at">long_tones =</span> <span class="dv">2</span><span class="dt">L</span>, <span class="at">arrhythmic =</span> <span class="dv">2</span><span class="dt">L</span>, <span class="at">rhythmic =</span> <span class="dv">2</span><span class="dt">L</span>),</span>
+<span id="cb25-10"><a href="play-by-ear-test-pbet-1.html#cb25-10" tabindex="-1"></a>               <span class="at">feedback =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb25-11"><a href="play-by-ear-test-pbet-1.html#cb25-11" tabindex="-1"></a>               <span class="at">SNR_test =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb25-12"><a href="play-by-ear-test-pbet-1.html#cb25-12" tabindex="-1"></a>               <span class="at">get_range =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb25-13"><a href="play-by-ear-test-pbet-1.html#cb25-13" tabindex="-1"></a>               <span class="at">examples =</span> <span class="dv">0</span>)</span></code></pre></div>
+<p>Remember that the <code>app_name</code> argument should match the name of your folder.</p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Make sure that your current directory is the app folder you created. You can check the current directory by using <code>getwd()</code>. You may need to set the app directory by placing <code>setwd('/Users/musicassessr/my_project/my_SAA_app')</code> at the beginning of your app file.</p></li>
+<li><p>Run the app. To do this in <em>RStudio</em>, use the shortcut <code>Command + Shift + Enter</code> on Mac (<code>Ctrl + Shift + Enter</code> on Windows).</p></li>
+<li><p>If the above steps were successful, the <code>SAA</code> test should load in your web browser, and as you progress through the test, you should receive feedback after each trial. Recorded audio should appear in the <em>/app_name/www/audio/</em> directory.</p></li>
+</ol>
+<p>If not, go to our <a href="">Troubleshooting</a> page or <a href="https://github.com/sebsilas/SAA/issues">raise an issue on Github</a>.</p>
+</div>
+<div id="usage-notes-1" class="section level2 hasAnchor" number="10.12">
+<h2><span class="header-section-number">10.12</span> Usage notes<a href="play-by-ear-test-pbet-1.html#usage-notes-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li>Big concept</li>
+<li><p>This has not yet been comprehensively tested on Windows. Please get in touch if you have any issues.</p></li>
+<li><p>The test requires internet connectivity.</p></li>
+<li><p>The <em>SAA</em> runs in your web browser. It is only recommended to run the test in <a href="https://www.google.com/chrome/">Google Chrome</a> or <a href="https://www.opera.com/download">Opera</a>. You will need to set one of these to be your default browser for <em>RStudio</em> to launch the test there (restart <em>RStudio</em> after doing this).</p></li>
 </ul>
 </div>
-<div id="predictions" class="section level2 hasAnchor" number="5.8">
-<h2><span class="header-section-number">5.8</span> Predictions<a href="theoretical-model.html#predictions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li>Simpler melodies will rely more on general working memory than musical working memory.</li>
-<li>In the short term (&lt; 30 mins), melodies learned by sight will be less better retained than those</li>
-</ul>
+<div id="citation-1" class="section level2 hasAnchor" number="10.13">
+<h2><span class="header-section-number">10.13</span> Citation<a href="play-by-ear-test-pbet-1.html#citation-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We advise mentioning the software versions you used,
+in particular the versions of the <code>SAA</code>, <code>musicassessr</code>, <code>psychTestR</code>, and <code>psychTestRCAT</code> packages.
+You can find these version numbers from R by running the following commands:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="play-by-ear-test-pbet-1.html#cb26-1" tabindex="-1"></a><span class="fu">library</span>(SAA)</span>
+<span id="cb26-2"><a href="play-by-ear-test-pbet-1.html#cb26-2" tabindex="-1"></a><span class="fu">library</span>(psychTestR)</span>
+<span id="cb26-3"><a href="play-by-ear-test-pbet-1.html#cb26-3" tabindex="-1"></a><span class="fu">library</span>(psychTestRCAT)</span>
+<span id="cb26-4"><a href="play-by-ear-test-pbet-1.html#cb26-4" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(devtools)) <span class="fu">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)</span>
+<span id="cb26-5"><a href="play-by-ear-test-pbet-1.html#cb26-5" tabindex="-1"></a>x <span class="ot">&lt;-</span> devtools<span class="sc">::</span><span class="fu">session_info</span>()</span>
+<span id="cb26-6"><a href="play-by-ear-test-pbet-1.html#cb26-6" tabindex="-1"></a>x<span class="sc">$</span>packages[x<span class="sc">$</span>packages<span class="sc">$</span>package <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;SAA&quot;</span>, <span class="st">&quot;psychTestR&quot;</span>, <span class="st">&quot;psychTestRCAT&quot;</span>), ]</span></code></pre></div>
+</div>
+<div id="references-6" class="section level2 hasAnchor" number="10.14">
+<h2><span class="header-section-number">10.14</span> References<a href="play-by-ear-test-pbet-1.html#references-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Silas, S., Müllensiefen, D., &amp; Kopiez, R. (2023). Singing Ability Assessment: Development and validation of a singing test based on item response theory and a general open-source software environment for singing data. Behaviour Research Methods. <a href="https://doi.org/10.3758/s13428-023-02188-0" class="uri">https://doi.org/10.3758/s13428-023-02188-0</a></p>
+</div>
+<div id="conclusion" class="section level2 hasAnchor" number="10.15">
+<h2><span class="header-section-number">10.15</span> Conclusion<a href="play-by-ear-test-pbet-1.html#conclusion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Thus, a primary outcome of this dissertation was the development of a computational ecosystem to record and assess music production data in real-time.</p>
 
 </div>
 </div>
@@ -477,8 +565,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="a-comprehensive-theorectical-model-of-playing-by-ear.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="computational-ecosystem.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="setup.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="melsim_development.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

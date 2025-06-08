@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5 Playing By Ear: A Theoretical Model | Playing By Ear: A Computational Approach</title>
-  <meta name="description" content="5 Playing By Ear: A Theoretical Model | Playing By Ear: A Computational Approach" />
+  <title>8 musicassessr | Playing By Ear: A Computational Approach</title>
+  <meta name="description" content="8 musicassessr | Playing By Ear: A Computational Approach" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5 Playing By Ear: A Theoretical Model | Playing By Ear: A Computational Approach" />
+  <meta property="og:title" content="8 musicassessr | Playing By Ear: A Computational Approach" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5 Playing By Ear: A Theoretical Model | Playing By Ear: A Computational Approach" />
+  <meta name="twitter:title" content="8 musicassessr | Playing By Ear: A Computational Approach" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="a-comprehensive-theorectical-model-of-playing-by-ear.html"/>
-<link rel="next" href="computational-ecosystem.html"/>
+<link rel="prev" href="pyin-r-package.html"/>
+<link rel="next" href="setup.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -382,94 +382,42 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="theoretical-model" class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">5</span> Playing By Ear: A Theoretical Model<a href="theoretical-model.html#theoretical-model" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>As far as the author is aware, no computational model of playing by ear has been described in the music psychology, or related, literature(s). Thus, a first step in this thesis is to propose a theoretical model, which can then later be formulated more precisely as a computational model, then tested, partly with data collected throughout this thesis.</p>
-<p>However, related computational models have been described, for instance in the domain of aural skill acquisition <span class="citation">(Baker 2019)</span> and sung melodic recall by the author <span class="citation">(Silas and Müllensiefen 2023; Silas, Müllensiefen, and Kopiez 2023)</span>. Theoretical cognitive models have also been described in the domain of singing accuracy <span class="citation">(Pfordresher et al. 2015)</span>. Therefore, in this section, I will attempt to synthesise this literature to propose a corresponding model specifically for playing by ear skills. I distinguish between two basic playing by ear processes: a) playing by ear skill acquisition (learning) and b) playing by ear skill execution (recall).</p>
-<div id="bringing-it-together" class="section level2 hasAnchor" number="5.1">
-<h2><span class="header-section-number">5.1</span> Bringing It Together<a href="theoretical-model.html#bringing-it-together" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In sum, then,</p>
-</div>
-<div id="moving-from-theoretical-to-computational" class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> Moving from Theoretical to Computational<a href="theoretical-model.html#moving-from-theoretical-to-computational" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>“When we develop a psychological theory that is sufficiently precise to be implemented as a computer program, we call it a computational model. The process of developing such theories, and implementing their corresponding computer programs, is then called computational modelling.” <span class="citation">(Harrison 2025)</span>.</p>
-<p>At this point, I already suggest a more specific feature to the model: that for playing by ear tasks, there exists a mental melodic “similarity” algorithm, housed in working memory. The input to this module is the target melody and the evolving real-time assessment of the melody being produced in the moment. The performer must hear the target melody, store this in short term memory as a reference, and then continuously update the target melody which each new note that is produced. I speculate that the mind recomputes the similarity between the presently number of recalled notes and the target melody iteratively, each time a new note is added. In other words, a check for the accuracy is made every time a note is recalled, and the presence of an error and its nature, will inform whether or not the performer stops to start again or continues to proceed recalling the melody, at least in the stage of learning. Formally:</p>
-<div id="inputs" class="section level3 hasAnchor" number="5.2.1">
-<h3><span class="header-section-number">5.2.1</span> Inputs<a href="theoretical-model.html#inputs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="musicassessr" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">8</span> musicassessr<a href="musicassessr.html#musicassessr" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><code>musicassessr</code> is an R package for facilitating the deployment of (particularly, musical) stimuli in psychological tests as well as recording and scoring data. It provides convenience functions to deploy stimuli via <a href="https://pmcharrison.github.io/psychTestR/"><code>psychTestR</code></a>, advanced <a href="https://pmcharrison.github.io/psychTestR/"><code>psychTestR</code></a> page types to collect new types of data, and utilities to process and score this data, among other things.</p>
+<div id="the-musicassessr-ecosystem" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> The musicassessr ecosystem<a href="musicassessr.html#the-musicassessr-ecosystem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><code>musicassessr</code> is part of a network of packages. See also:</p>
 <ul>
-<li><span class="math inline">\(T = [t_1, t_2, \dots, t_n]\)</span>: TargetMelody of fixed length <span class="math inline">\(n\)</span>.</li>
-<li><span class="math inline">\(R = [r_1, r_2, \dots, r_k]\)</span>: RecalledMelody of length <span class="math inline">\(k\)</span>, unknown a priori.</li>
+<li><a href="https://github.com/sebsilas/pyin"><code>pyin</code></a>: transcribe monophonic audio in the <em>R</em> environment using the pYIN algorithm</li>
+<li><a href="https://github.com/sebsilas/itembankr"><code>itembankr</code></a>: produce musicassessr-compatible item banks with useful melodic features</li>
+<li><a href="https://github.com/sebsilas/Berkowitz"><code>Berkowitz</code></a>: a pre-made <em>itembankr</em> item bank of the Baker (2021) / Berkowitz (2017) sight-singing corpus.</li>
+<li><a href="https://github.com/sebsilas/WJD"><code>WJD</code></a>: a pre-made <em>itembankr</em> item bank of the <a href="https://jazzomat.hfm-weimar.de/dbformat/dboverview.html">Weimar Jazz Database</a>.</li>
+</ul>
+<div id="musical-ability-tests" class="section level3 hasAnchor" number="8.1.1">
+<h3><span class="header-section-number">8.1.1</span> Musical ability tests<a href="musicassessr.html#musical-ability-tests" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><em>musicassessr</em> currently facilitates the following music ability tests:</p>
+<ul>
+<li><a href="https://saa.musicassessr.com"><code>SAA</code></a> (<em>Singing Ability Assessment</em>; Silas, Müllensiefen, &amp; Kopiez, 2023)</li>
+<li><a href="https://github.com/sebsilas/PBET"><code>PBET</code></a> (<em>Playing By Ear Test</em>)</li>
+<li><a href="https://github.com/sebsilas/PDT"><code>PDT</code></a> (<em>Pitch Discrimination Test</em>; our re-implementation of Soranzo &amp; Grassi, 2014)</li>
 </ul>
 </div>
-<div id="sequential-construction" class="section level3 hasAnchor" number="5.2.2">
-<h3><span class="header-section-number">5.2.2</span> Sequential Construction<a href="theoretical-model.html#sequential-construction" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><span class="math inline">\(T\)</span> is fixed and built one note at a time.</li>
-<li><span class="math inline">\(R\)</span> is sequentially constructed one note at a time.</li>
-</ul>
+<div id="cheat-sheet" class="section level3 hasAnchor" number="8.1.2">
+<h3><span class="header-section-number">8.1.2</span> Cheat Sheet<a href="musicassessr.html#cheat-sheet" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><a href="https://musicassessr.com/assets/musicassessr_cheat_sheet.pdf"><img src="https://musicassessr.com/assets/musicassessr_cheatsheet.png" width="630" height="495"/></a></p>
 </div>
-<div id="function-application" class="section level3 hasAnchor" number="5.2.3">
-<h3><span class="header-section-number">5.2.3</span> Function Application<a href="theoretical-model.html#function-application" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>At each step <span class="math inline">\(i\)</span> (current length of <span class="math inline">\(R\)</span>), the function <strong>MelSim</strong> is applied to <strong>TargetMelody</strong> and the current length of <strong>RecalledMelody</strong>.</li>
-</ul>
+<div id="analysis-pipeline" class="section level3 hasAnchor" number="8.1.3">
+<h3><span class="header-section-number">8.1.3</span> Analysis pipeline<a href="musicassessr.html#analysis-pipeline" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="float">
+<img src="https://musicassessr.com/assets/analysis_pipeline.jpg" alt="Analysis pipeline" />
+<div class="figcaption">Analysis pipeline</div>
 </div>
 </div>
-<div id="mathematical-representation" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> Mathematical Representation<a href="theoretical-model.html#mathematical-representation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Let:
-- <span class="math inline">\(T_i\)</span> be the prefix of the TargetMelody up to length <span class="math inline">\(i\)</span>, i.e., <span class="math inline">\(T_i = [t_1, t_2, \dots, t_i]\)</span>.
-- <span class="math inline">\(R_i\)</span> be the current state of the RecalledMelody of length <span class="math inline">\(i\)</span>, i.e., <span class="math inline">\(R_i = [r_1, r_2, \dots, r_i]\)</span>.
-- <span class="math inline">\(\text{MelSim}(T_i, R_i)\)</span> be the similarity function between the two melodies at length <span class="math inline">\(i\)</span>.</p>
-<p>The MelSim function can be formulated as:</p>
-<p><span class="math display">\[
-\text{MelSim}(T_i, R_i) = f(T_i, R_i)
-\]</span></p>
-<p>Where:
-- <span class="math inline">\(f\)</span> is a similarity measure (e.g., distance function, alignment score).
-- <span class="math inline">\(i\)</span> iterates from 1 to <span class="math inline">\(n\)</span>, where <span class="math inline">\(n\)</span> is the fixed length of the target melody.</p>
+<div id="research-and-documentation" class="section level3 hasAnchor" number="8.1.4">
+<h3><span class="header-section-number">8.1.4</span> Research and Documentation<a href="musicassessr.html#research-and-documentation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You can find several articles and tutorials <a href="https://sebsilas.github.io/musicassessr/articles/">here</a>, which include summarised results of research utilising this software (see: white papers). For in-depth reading, follow the results to the actual publications.</p>
 </div>
-<div id="algorithm-flow" class="section level2 hasAnchor" number="5.4">
-<h2><span class="header-section-number">5.4</span> Algorithm Flow<a href="theoretical-model.html#algorithm-flow" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ol style="list-style-type: decimal">
-<li>Start with an empty recalled melody <span class="math inline">\(R\)</span>.</li>
-<li>For each new note <span class="math inline">\(r_i\)</span> added to <span class="math inline">\(R\)</span>:
-<ul>
-<li>Compute the similarity: <span class="math inline">\(\text{MelSim}(T_i, R_i)\)</span> if <span class="math inline">\(i = n\)</span>.</li>
-</ul></li>
-<li>Repeat until the entire recalled melody is constructed.</li>
-</ol>
-</div>
-<div id="final-equation" class="section level2 hasAnchor" number="5.5">
-<h2><span class="header-section-number">5.5</span> Final Equation<a href="theoretical-model.html#final-equation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The similarity calculation is performed only when the length of the <strong>RecalledMelody</strong> equals the fixed length of the <strong>TargetMelody</strong>. Therefore, the final equation is expressed as:</p>
-<p><span class="math display">\[
-\text{MelSim}(T, R_n) = f(T, R_n)
-\]</span></p>
-<p>I note that the <code>MelSim</code> algorithm is itself modular and of discussion in and of itself (cite M&amp;F). For the purpose of this paper,</p>
-</div>
-<div id="strategies" class="section level2 hasAnchor" number="5.6">
-<h2><span class="header-section-number">5.6</span> Strategies<a href="theoretical-model.html#strategies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li>Beyond scope of this dissertation to investigate in detail.</li>
-<li>Pop strategies hypotheses: <span class="citation">(Liscio and Brown 2024)</span></li>
-<li>Also, we have our own text data, for later.</li>
-</ul>
-</div>
-<div id="the-melodic-mind-as-item-bank" class="section level2 hasAnchor" number="5.7">
-<h2><span class="header-section-number">5.7</span> The Melodic Mind as Item Bank<a href="theoretical-model.html#the-melodic-mind-as-item-bank" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>similar to <span class="citation">Haston and McPherson (2022)</span>’s concept of an “aural database”</p>
-<ul>
-<li>Big concept</li>
-</ul>
-</div>
-<div id="predictions" class="section level2 hasAnchor" number="5.8">
-<h2><span class="header-section-number">5.8</span> Predictions<a href="theoretical-model.html#predictions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li>Simpler melodies will rely more on general working memory than musical working memory.</li>
-<li>In the short term (&lt; 30 mins), melodies learned by sight will be less better retained than those</li>
-</ul>
-
 </div>
 </div>
             </section>
@@ -477,8 +425,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="a-comprehensive-theorectical-model-of-playing-by-ear.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="computational-ecosystem.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="pyin-r-package.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="setup.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
