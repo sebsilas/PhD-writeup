@@ -2,6 +2,7 @@ tab:unnamed-chunk-12
 fig:unnamed-chunk-13
 fig:unnamed-chunk-14
 fig:unnamed-chunk-15
+fig:unnamed-chunk-16
 eq:editdist
 eq:ngrukkon
 eq:ngrukkon2
@@ -59,7 +60,7 @@ cognitive-mechanisms-underlying-playing-by-ear
 auditory-perception
 working-memory-and-melodic-perception
 sensorimotor-integration-and-neural-basis
-interim-summary-1
+relation-to-playing-by-ear-research-in-the-music-education-literature
 pfordreshers-cognitive-model-of-singing-accuracy-and-h-pac-models
 bakers-computational-model-of-melodic-dictation
 models-of-sung-recall
