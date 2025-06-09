@@ -1,21 +1,38 @@
-# Playing By Ear: A Theoretical Model {#theoretical-model}
-
-As far as the author is aware, no computational model of playing by ear has been described in the music psychology, or related, literature(s). Thus, a first step in this thesis is to propose a theoretical model, which can then later be formulated more precisely as a computational model, then tested, partly with data collected throughout this thesis. 
-
-However, related computational models have been described, for instance in the domain of aural skill acquisition [@bakerModelingMelodicDictation2019] and sung melodic recall by the author [@silasLearningRecallingMelodies2023; @silasSingingAbilityAssessment2023]. Theoretical cognitive models have also been described in the domain of singing accuracy [@pfordresherTheoreticalPerspectivesSinging2015]. Therefore, in this section, I will attempt to synthesise this literature to propose a corresponding model specifically for playing by ear skills. I distinguish between two basic playing by ear processes: a) playing by ear skill acquisition (learning) and b) playing by ear skill execution (recall).
 
 
+# Playing By Ear: A Comprehensive Theoretical Model of Playing By Ear {#theoretical-model}
+
+As far as the author is aware, no computational model of playing by ear has been described in the music psychology, or related, literature(s). However, as reviewed in the last chapter, related computational models have been described, for instance in the domain of aural skill acquisition [@bakerModelingMelodicDictation2019] and sung melodic recall by the author [@silasLearningRecallingMelodies2023; @silasSingingAbilityAssessment2023]. Theoretical cognitive models have also been described in the domain of singing accuracy [@pfordresherTheoreticalPerspectivesSinging2015].
+
+Thus, a first step in this thesis is to propose a theoretical model, which can then later be formulated more precisely as a computational model, then tested, partly with data collected throughout this thesis. I will attempt to synthesise the literature reviewed in the last section to propose a corresponding model specifically for playing by ear skills. I distinguish between two basic playing by ear processes: a) playing by ear skill acquisition (learning) and b) playing by ear skill execution (recall).
 
 
-## Bringing It Together
+Synthesising the results above, we can characterise playing by ear as involving the following processes. Where I mark the text grey, I highlight an additional suggestion beyond the reviewed literature, as a contribution from my own theory development. I will refer to the person playing by ear as the "player" in the following description.
 
-In sum, then, 
+Playing by ear first requires a target melody to be perceived. Due to the nature of serial presentation, a presented auditory melody unfolds note-by-note. From the acoustic signal, the player decodes the fundamental frequencies into a melodic object based on their structural knowledge, in term based on a lifetime of listening (enculturation). The ability to do this also depends on the acoustic features themselves, especially its timbre. The closer the timbre to the player's on instrument, the easier it is to decode (and later recall) because the player can draw not only on melodic memory, memory for absolute pitch, including multimodal representations that might activate kinaesthetic/tactile traces (CITE). This overall ability to image the correct melodic object is "audiation". More experienced listeners and more musical training are better able to audiate, segmenting/chunking the target melody into relevant chunks. Each time a new note is heard from the melody, its strain on working memory increases based on the information content in each new note and the emergent tonal, rhythmic, metric and other structural features. In long term working memory for melodies, N-Gram chunks are stored distinct entities, each with their own properties - in particular, the amount that the player has experienced them in their listening experiences (including practising an instrument). This statistical sensibility should approximate the real frequency of occurrence in music. If there are visual cues (e.g., visual notation or a model - like a teacher to immitate) accompanying the audiated melody, these will be decoded in their respective working memory slave systems and potentially integrated in the episodic buffer, to form a multimodal representaiton that could inform overall recall.
+
+
+Once the target melody has completed being played, it will be stored in a short term melodic memory buffer and flagged as a point of reference. The longer this representation remains in this buffer without mental or physical rehearsal, the more it will decay in memory in a non-linear fashion. The extent of the target melody's burden on working memory load dictates if how the player will attempt to recall the melody, if at all. If working memory capacity is greatly surpassed, with the player able to retrieve no reliable representations, they may not attempt to recall the melody at all. If they have some vague representations, they might attempt to improve a sketch of what they heard. In a performance/high pressure situations (e.g., an aural exam), maybe they will have some fallback approach to attempt to respond musically or "style it out". Depending on the context, maybe the player (e.g., in the practising/learning) will take a strategy to help reinforce the melodic image because attempting to reproduce it, for example, by singing it.
+
+Eventually, if at least some - if not all - of the melody of the is represented reliably in melodic long term working memory, the player will attempt to produce it in the recall and an action plan will be setup to reproduce the melody. Potentially, clear motor action plans will have already been activated in respond to the stimulus in the form of imagined actions to reproduce the sequence. The player will direct their attention to the instrument and the tactile sensations and motoric actions required to reproduce the sound. As they produce each note, the recalled melody will be perceived by the ear and parsed again, note-by-note into first basic auditory representations in the phonological loop, but then higher order melodic structural ones in melodic working memory. Because the recalled melody is being physically produced by the player, it will have richer cues: e.g., visual ones, for a pianist directing their fingers to different keys, tactile ones for all instruments, motoric cues (i.e., the pattern tactile sensations). Again, they will be parsed eventually into an unfolding multimodal melodic representation.
+
+Every time a new note is recalled, a melodic similarity algorithm will compute on the latest version of the recalled melody in relation to the target melody. Generally, as each new note is recalled, the similarity should go up. If the similarity goes down, this will be flagged as a prediction error, feeding back to motor plans and potentially causing the player to make adjustments to their motor plans. The player will presumably attempt to make the rest of the recall maximise the similarity, even if certain notes or rhythms have clearly violated the possibility of perfect similarity. Typically, target melodies that were not held strongly enough in working memory or where there were errors in the recall will lead to shorter recalls, whereby the player may stop, perhaps to re-imagine the melodic object, or, if possible, to take another attempt at hearing it and trying again. If there are multiple attempts, which is usually the case in learning a melody, each attempt will increase in length and similarity, until the length of target and recall match and there is perfect similarity, or, if this is not possible in a given (learning) session, working on that melody will eventually be terminated once fatigue or motivation is sufficiently low. Returning to replay that melody at a later time, especially after a night's sleep, due to consolidation effect, should typically make the process easier next time, so long as the melody in question was too difficult - and therefore, the feasibility of this is a function of a melody's difficulty, which is also a function of a player's ability (which is in turn a function of their musical training and general working memory capacity). I represent this description in Figure xx.
+
+
+``` r
+knitr::include_graphics('img/PBE Computational Model.png')
+```
+
+<div class="figure">
+<img src="img/PBE Computational Model.png" alt="A Theoretical Cognitive Explanatory Model of Playing By Ear" width="1557" />
+<p class="caption">(\#fig:unnamed-chunk-1)A Theoretical Cognitive Explanatory Model of Playing By Ear</p>
+</div>
+
 
 
 ## Moving from Theoretical to Computational 
 
 "When we develop a psychological theory that is sufficiently precise to be implemented as a computer program, we call it a computational model. The process of developing such theories, and implementing their corresponding computer programs, is then called computational modelling." [@harrisonMusicScience2025].
-
 
 
 At this point, I already suggest a more specific feature to the model: that for playing by ear tasks, there exists a mental melodic "similarity" algorithm, housed in working memory. The input to this module is the target melody and the evolving real-time assessment of the melody being produced in the moment. The performer must hear the target melody, store this in short term memory as a reference, and then continuously update the target melody which each new note that is produced. I speculate that the mind recomputes the similarity between the presently number of recalled notes and the target melody iteratively, each time a new note is added. In other words, a check for the accuracy is made every time a note is recalled, and the presence of an error and its nature, will inform whether or not the performer stops to start again or continues to proceed recalling the melody, at least in the stage of learning. Formally:
@@ -50,10 +67,15 @@ Where:
 
 ## Algorithm Flow
 
+Some kind of general learning/metacognition "strategy" will generally be applied to the playing by ear process. It is beyond scope of this dissertation to investigate in detail, although, some were covered in our review of @liscioWatchingPopularMusicians2024, and this dissertation will present some free text data descriptions about strategies taken by participants. Thus, there are several possible algorithmic flows that could govern the recall of a melody. However, the description below will attempt to describe some potentially general and core components:
+
+
+
 1. Start with an empty recalled melody \( R \).
 2. For each new note \( r_i \) added to \( R \):
    - Compute the similarity: \( \text{MelSim}(T_i, R_i) \) if \( i = n \).
 3. Repeat until the entire recalled melody is constructed.
+4. If the similarity score goes down as one note is recalled, feedback error signal and potentially adjust motor plans, attempting to maximise the similarity on the next note recalled OR stop playing and start again.
 
 ## Final Equation
 
@@ -64,14 +86,9 @@ The similarity calculation is performed only when the length of the **RecalledMe
 \]
 
 
-I note that the `MelSim` algorithm is itself modular and of discussion in and of itself (cite M&F). For the purpose of this paper,
+I note that the `MelSim` algorithm is itself modular and of discussion in and of itself[@frielerSIMILEAlgorithmMelodic2005; @mullensiefenCognitiveAdequacyMeasurement2004; @mullensiefenMelodicSimilarityApproaches2004]. For the purpose of this paper,
 
 
-## Strategies
-
-- Beyond scope of this dissertation to investigate in detail.
-- Pop strategies hypotheses: [@liscioWatchingPopularMusicians2024]
-- Also, we have our own text data, for later.
 
 
 ## The Melodic Mind as Item Bank

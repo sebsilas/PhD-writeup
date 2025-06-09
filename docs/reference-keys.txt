@@ -2,11 +2,11 @@ tab:unnamed-chunk-12
 fig:unnamed-chunk-13
 fig:unnamed-chunk-14
 fig:unnamed-chunk-15
-fig:unnamed-chunk-16
 eq:editdist
 eq:ngrukkon
 eq:ngrukkon2
 eq:opti3
+fig:unnamed-chunk-1
 front-matter
 foreword
 acknowledgements
@@ -65,7 +65,6 @@ pfordreshers-cognitive-model-of-singing-accuracy-and-h-pac-models
 bakers-computational-model-of-melodic-dictation
 models-of-sung-recall
 playing-by-ear-research-conclusion
-a-comprehensive-theoretical-model-of-playing-by-ear
 musicological_background
 music-and-combinatorics
 music-corpora-analysis
@@ -91,7 +90,6 @@ conclusion-cognitive-psychological-background
 statistical_modelling_frameworks
 cognitive-modelling-item-feature-modelling-via-item-response-theory
 theoretical-model
-bringing-it-together
 moving-from-theoretical-to-computational
 inputs
 sequential-construction
@@ -99,7 +97,6 @@ function-application
 mathematical-representation
 algorithm-flow
 final-equation
-strategies
 the-melodic-mind-as-item-bank
 predictions
 computational-ecosystem
